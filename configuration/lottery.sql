@@ -90,6 +90,15 @@ create table if not exists `AwardNumber`(
     primary key(`anId`)
 )comment = "开奖号码表";
 
+drop table if exists `BetOn`;
+create table if not exists `BetOn`(
+    `boId` bigint auto_increment comment "下注ID",
+    `uId` bigint not null comment "用户Id",
+    `anId` bigint not null comment "开奖号码ID",
+    `boTime` datetime default current_timestamp comment "购买时间",
+    primary key(`boId`)
+)comment = "下注表";
+
 drop table if exists `BetOnNumber`;
 create table if not exists `BetOnNumber`(
     `bonId` bigint not null auto_increment comment "下注号码ID",
@@ -101,8 +110,8 @@ create table if not exists `BetOnNumber`(
     primary key(`bonId`)
 )comment = "下注号码表";
 
-drop table if exists `BetOnNumber`;
-create table if not exists `BetOnNumber`(
+drop table if exists `Message`;
+create table if not exists `Message`(
     `mId` bigint auto_increment comment "信息ID",
     `mName` varchar(16) comment "中奖用户名",
     `mMoney` decimal(12,2) comment "中奖的金额",
