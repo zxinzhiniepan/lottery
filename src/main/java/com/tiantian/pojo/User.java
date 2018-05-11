@@ -1,4 +1,4 @@
-package com.sample;
+package com.tiantian.pojo;
 
 
 public class User {
