@@ -10,7 +10,6 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-src/.svn/**/*
 .idea
 out
 

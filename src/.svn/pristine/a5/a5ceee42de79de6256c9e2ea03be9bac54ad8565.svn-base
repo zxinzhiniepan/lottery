@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>交易详情</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <style type="text/css">
+            body{
+                border:1px dashed black;
+                width: 80%;
+                margin: auto;
+            }
+            #header{
+                text-align: center;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            .table{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h3>交易详情</h3>
+        </div>
+        <div id="content">
+            <table class="table table-bordered table-striped ">
+                <tr>
+                    <td>交易时间</td>
+                    <td>交易类型</td>
+                    <td>交易金额</td>
+                    <td>余额</td>
+                </tr>
+                <tr>
+                    <td>2018-5-4 12:10:20</td>
+                    <td>下注</td>
+                    <td>-20</td>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <td>2018-5-4 12:10:20</td>
+                    <td>中奖</td>
+                    <td>+50</td>
+                    <td>50</td>
+
+                </tr>
+                <tr>
+                    <td>2018-5-4 12:10:20</td>
+                    <td>提现</td>
+                    <td>-20</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>2018-5-4 12:10:20</td>
+                    <td>客服</td>
+                    <td>-20</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>2018-5-4 12:10:20</td>
+                    <td>充值</td>
+                    <td>+500</td>
+                    <td>500</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

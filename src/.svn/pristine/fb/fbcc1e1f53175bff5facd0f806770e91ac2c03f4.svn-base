@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>现金流水</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <style>
+            header {
+                position: relative;
+                height: 50px;
+                background: #ca454c;
+            }
+
+            .headtop {
+                margin: 0;
+                padding: 0;
+            }
+
+            .headtop > a {
+                position: absolute;
+                display: inline-block;
+                top: 10px;
+                left: 15px;
+                width: 28px;
+                height: 28px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .headtop > h4 {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 21px;
+                color: #fff;
+            }
+            /*六合彩开奖、分分彩开奖*/
+            .row{
+                text-align: center;
+                height: 55px;
+                /*border-bottom: 1px dashed black;*/
+            }
+            /*标题包裹div*/
+            .title-wrap{
+                background-color: white;
+                border-bottom: 1px solid #d7d7d7;
+                padding:5px 0px;
+
+            }
+
+            .title-wrap:first-of-type{
+                border-right: 1px solid #d7d7d7;
+                border-bottom: 3px solid red;
+            }
+            /*分分彩开奖*/
+            .result-two{
+                display: none;
+            }
+
+            footer {
+                height: 80px;
+            }
+
+            .font_but {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                background: #FAFAFA;
+            }
+
+            .font_but > ul {
+                overflow: hidden;
+            }
+
+            .font_but > ul > li {
+                float: left;
+                width: 25%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .font_but > ul > li > a > i {
+                font-size: 22px;
+                color: #7A7A7A;
+                opacity: 0.74;
+            }
+
+            .font_but > ul > li > a {
+                display: inline-block;
+                width: 100%;
+            }
+
+            .font_but > ul > li:nth-child(2) i, .font_but > ul > li:nth-child(2) a p {
+                color: #f96237;
+            }
+
+            .note_rt > h5 {
+                padding: 10px 0;
+                text-align: center;
+                font-weight: bold;
+                border-bottom: 1px solid #eee;
+            }
+
+            .note_rt {
+                background: #fff;
+            }
+
+            .note_rt > h5 > font {
+                color: #ee3030;
+            }
+
+            .note_rt > ul {
+                overflow: hidden;
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .note_rt > ul > li {
+                float: left;
+                width: 20%;
+                text-align: center;
+                padding: 8px;
+            }
+
+            .note_rt > ul > li > b {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: #dd3f3f;
+                border-radius: 50%;
+                color: #fff;
+                line-height: 30px;
+            }
+
+            .tab_kj {
+                overflow: hidden;
+            }
+
+            .tab_kj > b {
+                border: 1px solid #ccc;
+                float: left;
+                text-align: center;
+                padding: 5px 0;
+            }
+
+            .tab_kj > b:first-child {
+                width: 38%;
+                border-right: 0;
+
+            }
+
+            .tab_kj > b:last-child {
+                width: 62%;
+            }
+
+            .tab_hm > li > b {
+                display: inline-block;
+                text-align: center;
+            }
+
+            .tab_hm {
+                background: #fff;
+            }
+
+            .tab_hm > li {
+                border-bottom: 1px solid #eee;
+                padding: 10px;
+            }
+
+            .tab_hm > li > b:first-child {
+                width: 37%;
+                color: #ee3030;
+            }
+
+            .tab_hm > li > b:last-child {
+                width: 60%;
+                letter-spacing: 10px;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="headtop">
+            <h4>开奖结果</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 title-wrap" data="result-one">
+                    <h4>六合彩开奖</h4>
+                </div>
+                <div class="col-xs-6 title-wrap" data="result-two">
+                    <h4>分分彩开奖</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-one result">
+            <div>
+                <div class="note_rt">
+                    <h5>第 <font>0325023</font>期开奖</h5>
+                    <ul>
+                        <li>
+                            <b>02</b>
+                        </li>
+                        <li>
+                            <b>05</b>
+                        </li>
+                        <li>
+                            <b>08</b>
+                        </li>
+                        <li>
+                            <b>08</b>
+                        </li>
+                        <li>
+                            <b>09</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="tab_kj">
+                    <b>期号</b>
+                    <b>开奖号</b>
+                </div>
+                <ul class="tab_hm">
+                    <li>
+                        <b>0231551</b>
+                        <b>122386</b>
+                    </li>
+                    <li>
+                        <b>0231551</b>
+                        <b>122386</b>
+                    </li>
+                    <li>
+                        <b>0231551</b>
+                        <b>122386</b>
+                    </li>
+                    <li>
+                        <b>0231551</b>
+                        <b>122386</b>
+                    </li>
+
+                    <li>
+                        <b>0231551</b>
+                        <b>122386</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="result-two result">
+            <div>
+                <div class="note_rt">
+                    <h5>第 <font>1</font>期开奖</h5>
+                    <ul>
+                        <li>
+                            <b>01</b>
+                        </li>
+                        <li>
+                            <b>02</b>
+                        </li>
+                        <li>
+                            <b>03</b>
+                        </li>
+                        <li>
+                            <b>04</b>
+                        </li>
+                        <li>
+                            <b>05</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="tab_kj">
+                    <b>期号</b>
+                    <b>开奖号</b>
+                </div>
+                <ul class="tab_hm">
+                    <li>
+                        <b>1</b>
+                        <b>122386</b>
+                    </li>
+                    <li>
+                        <b>2</b>
+                        <b>122386</b>
+                    </li>
+                    <li>
+                        <b>3</b>
+                        <b>122386</b>
+                    </li>
+                    <li>
+                        <b>4</b>
+                        <b>122386</b>
+                    </li>
+
+                    <li>
+                        <b>5</b>
+                        <b>122386</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="font_but">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home fa-2x"></i>
+                        <p>购彩</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-gift fa-2x"></i>
+                        <p>开奖</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="information.html">
+                        <i class="fa fa-podcast fa-2x"></i>
+                        <p>资讯</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="MySubject.html">
+                        <i class="fa fa-user-circle fa-2x"></i>
+                        <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../../js/jquery-2.0.3.min.js"></script>
+    <script src="../../js/jquery.combo.select.js"></script>
+    <script>
+       /*六合彩开奖、分分彩开奖标签切换*/
+       $('.title-wrap').on('click',function () {
+           var data = $(this).attr('data');
+           $(this).css('border-bottom','3px solid red');
+           $('.title-wrap').not($(this)).css('border-bottom','1px solid #d7d7d7');
+           $('.result').hide();
+           $('.' + data).show();
+       });
+
+    </script>
+
+</html>
