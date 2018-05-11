@@ -1,47 +1,47 @@
 package com.tiantian.pojo;
 
 
-public class Message {
+import java.io.Serializable;
 
-  private long mId;
+public class Message implements Serializable {
+
+  private Long mId;
   private String mName;
-  private double mMoney;
-  private long anid;
+  private Double mMoney;
+  private Long anid;
 
+  public Message() {
+  }
 
-  public long getMId() {
+  public Long getmId() {
     return mId;
   }
 
-  public void setMId(long mId) {
+  public void setmId(Long mId) {
     this.mId = mId;
   }
 
-
-  public String getMName() {
+  public String getmName() {
     return mName;
   }
 
-  public void setMName(String mName) {
+  public void setmName(String mName) {
     this.mName = mName;
   }
 
-
-  public double getMMoney() {
+  public Double getmMoney() {
     return mMoney;
   }
 
-  public void setMMoney(double mMoney) {
+  public void setmMoney(Double mMoney) {
     this.mMoney = mMoney;
   }
 
-
-  public long getAnid() {
+  public Long getAnid() {
     return anid;
   }
 
-  public void setAnid(long anid) {
+  public void setAnid(Long anid) {
     this.anid = anid;
   }
-
 }

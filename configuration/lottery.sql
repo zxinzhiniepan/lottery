@@ -32,7 +32,7 @@ create table if not exists `Transation`(
 drop table if exists `TransactionClass`;
 create table if not exists `TransactionClass`(
     `tcId` bigint not null auto_increment comment "交易类型ID",
-    `tcName` bigint not null comment "交易类型名",
+    `tcName` varchar(16) not null comment "交易类型名",
     primary key(`tcId`)
 )comment = "交易类型表";
 

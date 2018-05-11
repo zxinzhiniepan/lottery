@@ -1,107 +1,102 @@
 package com.tiantian.pojo;
 
 
-public class Awardnumber {
+import java.io.Serializable;
+import java.util.Date;
 
-  private long anId;
-  private long anNo;
-  private long gId;
-  private java.sql.Timestamp anTime;
-  private long gNumber1;
-  private long gNumber2;
-  private long gNumber3;
-  private long gNumber4;
-  private long gNumber5;
-  private long gNumber6;
+public class Awardnumber implements Serializable{
 
+    private Long anId;
+    private Long anNo;
+    private Long gId;
+    private Date anTime;
+    private Long gNumber1;
+    private Long gNumber2;
+    private Long gNumber3;
+    private Long gNumber4;
+    private Long gNumber5;
+    private Long gNumber6;
 
-  public long getAnId() {
-    return anId;
-  }
+    public Awardnumber() {
+    }
 
-  public void setAnId(long anId) {
-    this.anId = anId;
-  }
+    public Long getAnId() {
+        return anId;
+    }
 
+    public void setAnId(Long anId) {
+        this.anId = anId;
+    }
 
-  public long getAnNo() {
-    return anNo;
-  }
+    public Long getAnNo() {
+        return anNo;
+    }
 
-  public void setAnNo(long anNo) {
-    this.anNo = anNo;
-  }
+    public void setAnNo(Long anNo) {
+        this.anNo = anNo;
+    }
 
+    public Long getgId() {
+        return gId;
+    }
 
-  public long getGId() {
-    return gId;
-  }
+    public void setgId(Long gId) {
+        this.gId = gId;
+    }
 
-  public void setGId(long gId) {
-    this.gId = gId;
-  }
+    public Date getAnTime() {
+        return anTime;
+    }
 
+    public void setAnTime(Date anTime) {
+        this.anTime = anTime;
+    }
 
-  public java.sql.Timestamp getAnTime() {
-    return anTime;
-  }
+    public Long getgNumber1() {
+        return gNumber1;
+    }
 
-  public void setAnTime(java.sql.Timestamp anTime) {
-    this.anTime = anTime;
-  }
+    public void setgNumber1(Long gNumber1) {
+        this.gNumber1 = gNumber1;
+    }
 
+    public Long getgNumber2() {
+        return gNumber2;
+    }
 
-  public long getGNumber1() {
-    return gNumber1;
-  }
+    public void setgNumber2(Long gNumber2) {
+        this.gNumber2 = gNumber2;
+    }
 
-  public void setGNumber1(long gNumber1) {
-    this.gNumber1 = gNumber1;
-  }
+    public Long getgNumber3() {
+        return gNumber3;
+    }
 
+    public void setgNumber3(Long gNumber3) {
+        this.gNumber3 = gNumber3;
+    }
 
-  public long getGNumber2() {
-    return gNumber2;
-  }
+    public Long getgNumber4() {
+        return gNumber4;
+    }
 
-  public void setGNumber2(long gNumber2) {
-    this.gNumber2 = gNumber2;
-  }
+    public void setgNumber4(Long gNumber4) {
+        this.gNumber4 = gNumber4;
+    }
 
+    public Long getgNumber5() {
+        return gNumber5;
+    }
 
-  public long getGNumber3() {
-    return gNumber3;
-  }
+    public void setgNumber5(Long gNumber5) {
+        this.gNumber5 = gNumber5;
+    }
 
-  public void setGNumber3(long gNumber3) {
-    this.gNumber3 = gNumber3;
-  }
+    public Long getgNumber6() {
+        return gNumber6;
+    }
 
-
-  public long getGNumber4() {
-    return gNumber4;
-  }
-
-  public void setGNumber4(long gNumber4) {
-    this.gNumber4 = gNumber4;
-  }
-
-
-  public long getGNumber5() {
-    return gNumber5;
-  }
-
-  public void setGNumber5(long gNumber5) {
-    this.gNumber5 = gNumber5;
-  }
-
-
-  public long getGNumber6() {
-    return gNumber6;
-  }
-
-  public void setGNumber6(long gNumber6) {
-    this.gNumber6 = gNumber6;
-  }
-
+    public void setgNumber6(Long gNumber6) {
+        this.gNumber6 = gNumber6;
+    }
 }

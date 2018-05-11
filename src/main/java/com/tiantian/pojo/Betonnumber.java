@@ -1,67 +1,66 @@
 package com.tiantian.pojo;
 
 
-public class Betonnumber {
+import java.io.Serializable;
+import java.util.Date;
 
-  private long bonId;
-  private long boId;
-  private long bonKey;
-  private double bonMoney;
-  private java.sql.Timestamp bonTime;
-  private double rate;
+public class Betonnumber implements Serializable {
 
+  private Long bonId;
+  private Long boId;
+  private Long bonKey;
+  private Double bonMoney;
+  private Date bonTime;
+  private Double rate;
 
-  public long getBonId() {
+  public Betonnumber() {
+  }
+
+  public Long getBonId() {
     return bonId;
   }
 
-  public void setBonId(long bonId) {
+  public void setBonId(Long bonId) {
     this.bonId = bonId;
   }
 
-
-  public long getBoId() {
+  public Long getBoId() {
     return boId;
   }
 
-  public void setBoId(long boId) {
+  public void setBoId(Long boId) {
     this.boId = boId;
   }
 
-
-  public long getBonKey() {
+  public Long getBonKey() {
     return bonKey;
   }
 
-  public void setBonKey(long bonKey) {
+  public void setBonKey(Long bonKey) {
     this.bonKey = bonKey;
   }
 
-
-  public double getBonMoney() {
+  public Double getBonMoney() {
     return bonMoney;
   }
 
-  public void setBonMoney(double bonMoney) {
+  public void setBonMoney(Double bonMoney) {
     this.bonMoney = bonMoney;
   }
 
-
-  public java.sql.Timestamp getBonTime() {
+  public Date getBonTime() {
     return bonTime;
   }
 
-  public void setBonTime(java.sql.Timestamp bonTime) {
+  public void setBonTime(Date bonTime) {
     this.bonTime = bonTime;
   }
 
-
-  public double getRate() {
+  public Double getRate() {
     return rate;
   }
 
-  public void setRate(double rate) {
+  public void setRate(Double rate) {
     this.rate = rate;
   }
-
 }

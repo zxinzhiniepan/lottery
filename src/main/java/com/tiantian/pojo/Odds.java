@@ -1,47 +1,47 @@
 package com.tiantian.pojo;
 
 
-public class Odds {
+import java.io.Serializable;
 
-  private long oId;
-  private long pId;
-  private long oNumber;
-  private double oRate;
+public class Odds implements Serializable {
 
+  private Long oId;
+  private Long pId;
+  private Long oNumber;
+  private Double oRate;
 
-  public long getOId() {
+  public Odds() {
+  }
+
+  public Long getoId() {
     return oId;
   }
 
-  public void setOId(long oId) {
+  public void setoId(Long oId) {
     this.oId = oId;
   }
 
-
-  public long getPId() {
+  public Long getpId() {
     return pId;
   }
 
-  public void setPId(long pId) {
+  public void setpId(Long pId) {
     this.pId = pId;
   }
 
-
-  public long getONumber() {
+  public Long getoNumber() {
     return oNumber;
   }
 
-  public void setONumber(long oNumber) {
+  public void setoNumber(Long oNumber) {
     this.oNumber = oNumber;
   }
 
-
-  public double getORate() {
+  public Double getoRate() {
     return oRate;
   }
 
-  public void setORate(double oRate) {
+  public void setoRate(Double oRate) {
     this.oRate = oRate;
   }
-
 }

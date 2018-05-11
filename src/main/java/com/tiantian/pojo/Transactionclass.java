@@ -1,27 +1,29 @@
 package com.tiantian.pojo;
 
 
-public class Transactionclass {
+import java.io.Serializable;
 
-  private long tcId;
-  private long tcName;
+public class Transactionclass implements Serializable {
 
+  private Long tcId;
+  private String tcName;
 
-  public long getTcId() {
+  public Transactionclass() {
+  }
+
+  public Long getTcId() {
     return tcId;
   }
 
-  public void setTcId(long tcId) {
+  public void setTcId(Long tcId) {
     this.tcId = tcId;
   }
 
-
-  public long getTcName() {
+  public String getTcName() {
     return tcName;
   }
 
-  public void setTcName(long tcName) {
+  public void setTcName(String tcName) {
     this.tcName = tcName;
   }
-
 }

@@ -1,37 +1,38 @@
 package com.tiantian.pojo;
 
 
-public class Game {
+import java.io.Serializable;
 
-  private long gId;
+public class Game implements Serializable {
+
+  private Long gId;
   private String gName;
   private String gIntroduce;
 
+  public Game() {
+  }
 
-  public long getGId() {
+  public Long getgId() {
     return gId;
   }
 
-  public void setGId(long gId) {
+  public void setgId(Long gId) {
     this.gId = gId;
   }
 
-
-  public String getGName() {
+  public String getgName() {
     return gName;
   }
 
-  public void setGName(String gName) {
+  public void setgName(String gName) {
     this.gName = gName;
   }
 
-
-  public String getGIntroduce() {
+  public String getgIntroduce() {
     return gIntroduce;
   }
 
-  public void setGIntroduce(String gIntroduce) {
+  public void setgIntroduce(String gIntroduce) {
     this.gIntroduce = gIntroduce;
   }
-
 }

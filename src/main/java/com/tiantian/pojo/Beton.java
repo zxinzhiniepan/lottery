@@ -1,47 +1,48 @@
 package com.tiantian.pojo;
 
 
-public class Beton {
+import java.io.Serializable;
+import java.util.Date;
 
-  private long boId;
-  private long uId;
-  private long anId;
-  private java.sql.Timestamp boTime;
+public class Beton implements Serializable {
 
+  private Long boId;
+  private Long uId;
+  private Long anId;
+  private Date boTime;
 
-  public long getBoId() {
+  public Beton() {
+  }
+
+  public Long getBoId() {
     return boId;
   }
 
-  public void setBoId(long boId) {
+  public void setBoId(Long boId) {
     this.boId = boId;
   }
 
-
-  public long getUId() {
+  public Long getuId() {
     return uId;
   }
 
-  public void setUId(long uId) {
+  public void setuId(Long uId) {
     this.uId = uId;
   }
 
-
-  public long getAnId() {
+  public Long getAnId() {
     return anId;
   }
 
-  public void setAnId(long anId) {
+  public void setAnId(Long anId) {
     this.anId = anId;
   }
 
-
-  public java.sql.Timestamp getBoTime() {
+  public Date getBoTime() {
     return boTime;
   }
 
-  public void setBoTime(java.sql.Timestamp boTime) {
+  public void setBoTime(Date boTime) {
     this.boTime = boTime;
   }
-
 }

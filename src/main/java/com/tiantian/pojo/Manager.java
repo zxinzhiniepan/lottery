@@ -1,87 +1,84 @@
 package com.tiantian.pojo;
 
 
-public class Manager {
+import java.io.Serializable;
+import java.util.Date;
 
-  private long mId;
-  private long uId;
-  private long recharge;
-  private long modifiedPwd;
-  private long subordinate;
-  private long bill;
-  private long transactionLog;
-  private java.sql.Timestamp addTime;
+public class Manager implements Serializable {
 
+  private Long mId;
+  private Long uId;
+  private Long recharge;
+  private Long modifiedPwd;
+  private Long subordinate;
+  private Long bill;
+  private Long transactionLog;
+  private Date addTime;
 
-  public long getMId() {
+  public Manager() {
+  }
+
+  public Long getmId() {
     return mId;
   }
 
-  public void setMId(long mId) {
+  public void setmId(Long mId) {
     this.mId = mId;
   }
 
-
-  public long getUId() {
+  public Long getuId() {
     return uId;
   }
 
-  public void setUId(long uId) {
+  public void setuId(Long uId) {
     this.uId = uId;
   }
 
-
-  public long getRecharge() {
+  public Long getRecharge() {
     return recharge;
   }
 
-  public void setRecharge(long recharge) {
+  public void setRecharge(Long recharge) {
     this.recharge = recharge;
   }
 
-
-  public long getModifiedPwd() {
+  public Long getModifiedPwd() {
     return modifiedPwd;
   }
 
-  public void setModifiedPwd(long modifiedPwd) {
+  public void setModifiedPwd(Long modifiedPwd) {
     this.modifiedPwd = modifiedPwd;
   }
 
-
-  public long getSubordinate() {
+  public Long getSubordinate() {
     return subordinate;
   }
 
-  public void setSubordinate(long subordinate) {
+  public void setSubordinate(Long subordinate) {
     this.subordinate = subordinate;
   }
 
-
-  public long getBill() {
+  public Long getBill() {
     return bill;
   }
 
-  public void setBill(long bill) {
+  public void setBill(Long bill) {
     this.bill = bill;
   }
 
-
-  public long getTransactionLog() {
+  public Long getTransactionLog() {
     return transactionLog;
   }
 
-  public void setTransactionLog(long transactionLog) {
+  public void setTransactionLog(Long transactionLog) {
     this.transactionLog = transactionLog;
   }
 
-
-  public java.sql.Timestamp getAddTime() {
+  public Date getAddTime() {
     return addTime;
   }
 
-  public void setAddTime(java.sql.Timestamp addTime) {
+  public void setAddTime(Date addTime) {
     this.addTime = addTime;
   }
-
 }

@@ -1,97 +1,93 @@
 package com.tiantian.pojo;
 
 
-public class Transation {
+import java.io.Serializable;
+import java.util.Date;
 
-  private long tId;
-  private long uId;
-  private long tClass;
-  private long tAccount;
-  private double money;
-  private java.sql.Timestamp dTime;
-  private java.sql.Timestamp cTime;
-  private long tSuccess;
-  private long mId;
+public class Transation implements Serializable {
 
+  private Long tId;
+  private Long uId;
+  private Long tClass;
+  private Long tAccount;
+  private Double money;
+  private Date dTime;
+  private Date cTime;
+  private Long tSuccess;
+  private Long mId;
 
-  public long getTId() {
+  public Transation() {
+  }
+
+  public Long gettId() {
     return tId;
   }
 
-  public void setTId(long tId) {
+  public void settId(Long tId) {
     this.tId = tId;
   }
 
-
-  public long getUId() {
+  public Long getuId() {
     return uId;
   }
 
-  public void setUId(long uId) {
+  public void setuId(Long uId) {
     this.uId = uId;
   }
 
-
-  public long getTClass() {
+  public Long gettClass() {
     return tClass;
   }
 
-  public void setTClass(long tClass) {
+  public void settClass(Long tClass) {
     this.tClass = tClass;
   }
 
-
-  public long getTAccount() {
+  public Long gettAccount() {
     return tAccount;
   }
 
-  public void setTAccount(long tAccount) {
+  public void settAccount(Long tAccount) {
     this.tAccount = tAccount;
   }
 
-
-  public double getMoney() {
+  public Double getMoney() {
     return money;
   }
 
-  public void setMoney(double money) {
+  public void setMoney(Double money) {
     this.money = money;
   }
 
-
-  public java.sql.Timestamp getDTime() {
+  public Date getdTime() {
     return dTime;
   }
 
-  public void setDTime(java.sql.Timestamp dTime) {
+  public void setdTime(Date dTime) {
     this.dTime = dTime;
   }
 
-
-  public java.sql.Timestamp getCTime() {
+  public Date getcTime() {
     return cTime;
   }
 
-  public void setCTime(java.sql.Timestamp cTime) {
+  public void setcTime(Date cTime) {
     this.cTime = cTime;
   }
 
-
-  public long getTSuccess() {
+  public Long gettSuccess() {
     return tSuccess;
   }
 
-  public void setTSuccess(long tSuccess) {
+  public void settSuccess(Long tSuccess) {
     this.tSuccess = tSuccess;
   }
 
-
-  public long getMId() {
+  public Long getmId() {
     return mId;
   }
 
-  public void setMId(long mId) {
+  public void setmId(Long mId) {
     this.mId = mId;
   }
-
 }

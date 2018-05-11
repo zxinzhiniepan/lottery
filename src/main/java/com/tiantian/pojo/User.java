@@ -1,107 +1,102 @@
 package com.tiantian.pojo;
 
 
-public class User {
+import java.io.Serializable;
+import java.util.Date;
 
-  private long uId;
+public class User implements Serializable {
+
+  private Long uId;
   private String uName;
   private String uRealName;
   private String uPassword;
   private String uPhone;
   private String uWechat;
   private String uAlipay;
-  private long uLeaderId;
-  private java.sql.Timestamp uTime;
-  private double balance;
+  private Long uLeaderId;
+  private Date uTime;
+  private Double balance;
 
+  public User() {
+  }
 
-  public long getUId() {
+  public Long getuId() {
     return uId;
   }
 
-  public void setUId(long uId) {
+  public void setuId(Long uId) {
     this.uId = uId;
   }
 
-
-  public String getUName() {
+  public String getuName() {
     return uName;
   }
 
-  public void setUName(String uName) {
+  public void setuName(String uName) {
     this.uName = uName;
   }
 
-
-  public String getURealName() {
+  public String getuRealName() {
     return uRealName;
   }
 
-  public void setURealName(String uRealName) {
+  public void setuRealName(String uRealName) {
     this.uRealName = uRealName;
   }
 
-
-  public String getUPassword() {
+  public String getuPassword() {
     return uPassword;
   }
 
-  public void setUPassword(String uPassword) {
+  public void setuPassword(String uPassword) {
     this.uPassword = uPassword;
   }
 
-
-  public String getUPhone() {
+  public String getuPhone() {
     return uPhone;
   }
 
-  public void setUPhone(String uPhone) {
+  public void setuPhone(String uPhone) {
     this.uPhone = uPhone;
   }
 
-
-  public String getUWechat() {
+  public String getuWechat() {
     return uWechat;
   }
 
-  public void setUWechat(String uWechat) {
+  public void setuWechat(String uWechat) {
     this.uWechat = uWechat;
   }
 
-
-  public String getUAlipay() {
+  public String getuAlipay() {
     return uAlipay;
   }
 
-  public void setUAlipay(String uAlipay) {
+  public void setuAlipay(String uAlipay) {
     this.uAlipay = uAlipay;
   }
 
-
-  public long getULeaderId() {
+  public Long getuLeaderId() {
     return uLeaderId;
   }
 
-  public void setULeaderId(long uLeaderId) {
+  public void setuLeaderId(Long uLeaderId) {
     this.uLeaderId = uLeaderId;
   }
 
-
-  public java.sql.Timestamp getUTime() {
+  public Date getuTime() {
     return uTime;
   }
 
-  public void setUTime(java.sql.Timestamp uTime) {
+  public void setuTime(Date uTime) {
     this.uTime = uTime;
   }
 
-
-  public double getBalance() {
+  public Double getBalance() {
     return balance;
   }
 
-  public void setBalance(double balance) {
+  public void setBalance(Double balance) {
     this.balance = balance;
   }
-
 }
