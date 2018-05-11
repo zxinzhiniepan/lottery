@@ -20,4 +20,17 @@ dependencies {
             "org.apache.logging.log4j:log4j-core:${log4j2Version}",
             "org.apache.logging.log4j:log4j-jul:${log4j2Version}",
     )
+
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.2.0")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.2.0")
+}
+
+test{
+    useJUnitPlatform()
+    testLogging{
+        showExceptions = true
+        showStackTraces = true
+        showStandardStreams = true
+        events "started", "skipped", "failed", "standard_out"
+    }
 }
