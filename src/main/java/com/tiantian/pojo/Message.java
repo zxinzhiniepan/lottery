@@ -1,9 +1,11 @@
 package com.tiantian.pojo;
 
 
+import com.tiantian.util.PojoModel;
+
 import java.io.Serializable;
 
-public class Message implements Serializable {
+public class Message extends PojoModel implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long mId;
   private String mName;

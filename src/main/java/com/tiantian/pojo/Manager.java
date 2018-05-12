@@ -1,10 +1,12 @@
 package com.tiantian.pojo;
 
 
+import com.tiantian.util.PojoModel;
+
 import java.io.Serializable;
 import java.util.Date;
 
-public class Manager implements Serializable {
+public class Manager extends PojoModel implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long mId;
   private Long uId;

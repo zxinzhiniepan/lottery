@@ -8,10 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest(classes = AppStart.class)
 public class ProjectTest {
     @Autowired
@@ -21,14 +21,13 @@ public class ProjectTest {
     @Test
     public void show(){
         User user = userService.findAllUser().get(0);
-        log.info("+++++++++++++++++++++" + user.getuName());
-        log.info("hello");
+        log.info(user.toString());
     }
 
     @Test
     public void show2(){
-        User user = userService.findAll().get(0);
-        log.info("+++++++++++++++++++++" + user.getuName());
+        User user = userService.findUserById(1L);
+        log.info(user.toString());
     }
 
 }

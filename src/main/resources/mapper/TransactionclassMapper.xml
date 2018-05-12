@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.auto.mapper.TransactionclassMapper">
-  <resultMap id="BaseResultMap" type="com.auto.entity.Transactionclass">
+<mapper namespace="com.tiantian.mapper.TransactionclassMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Transactionclass">
     <id column="tcId" jdbcType="BIGINT" property="tcId" />
     <result column="tcName" jdbcType="VARCHAR" property="tcName" />
   </resultMap>
@@ -18,11 +18,11 @@
     delete from transactionclass
     where tcId = #{tcId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.auto.entity.Transactionclass">
+  <insert id="insert" parameterType="com.tiantian.pojo.Transactionclass">
     insert into transactionclass (tcId, tcName)
     values (#{tcId,jdbcType=BIGINT}, #{tcName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.auto.entity.Transactionclass">
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Transactionclass">
     insert into transactionclass
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="tcId != null">
@@ -41,7 +41,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.auto.entity.Transactionclass">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Transactionclass">
     update transactionclass
     <set>
       <if test="tcName != null">
@@ -50,7 +50,7 @@
     </set>
     where tcId = #{tcId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.auto.entity.Transactionclass">
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Transactionclass">
     update transactionclass
     set tcName = #{tcName,jdbcType=VARCHAR}
     where tcId = #{tcId,jdbcType=BIGINT}

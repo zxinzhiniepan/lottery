@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.auto.mapper.GameMapper">
-  <resultMap id="BaseResultMap" type="com.auto.entity.Game">
+<mapper namespace="com.tiantian.mapper.GameMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Game">
     <id column="gId" jdbcType="BIGINT" property="gId" />
     <result column="gName" jdbcType="VARCHAR" property="gName" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.auto.entity.Game">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.tiantian.pojo.Game">
     <result column="gIntroduce" jdbcType="LONGVARCHAR" property="gIntroduce" />
   </resultMap>
   <sql id="Base_Column_List">
@@ -26,13 +26,13 @@
     delete from game
     where gId = #{gId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.auto.entity.Game">
+  <insert id="insert" parameterType="com.tiantian.pojo.Game">
     insert into game (gId, gName, gIntroduce
       )
     values (#{gId,jdbcType=BIGINT}, #{gName,jdbcType=VARCHAR}, #{gIntroduce,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.auto.entity.Game">
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Game">
     insert into game
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="gId != null">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.auto.entity.Game">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Game">
     update game
     <set>
       <if test="gName != null">
@@ -69,13 +69,13 @@
     </set>
     where gId = #{gId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.auto.entity.Game">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tiantian.pojo.Game">
     update game
     set gName = #{gName,jdbcType=VARCHAR},
       gIntroduce = #{gIntroduce,jdbcType=LONGVARCHAR}
     where gId = #{gId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.auto.entity.Game">
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Game">
     update game
     set gName = #{gName,jdbcType=VARCHAR}
     where gId = #{gId,jdbcType=BIGINT}

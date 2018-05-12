@@ -1,9 +1,11 @@
 package com.tiantian.pojo;
 
 
+import com.tiantian.util.PojoModel;
+
 import java.io.Serializable;
 
-public class Transactionclass implements Serializable {
+public class Transactionclass extends PojoModel implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long tcId;
   private String tcName;

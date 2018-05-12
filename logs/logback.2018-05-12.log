@@ -1,0 +1,1368 @@
+11:06:34.595 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 16531 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+11:06:34.614 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+11:06:34.681 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7d93ce25: startup date [Sat May 12 11:06:34 CST 2018]; root of context hierarchy
+11:06:35.738 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+11:06:35.748 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+11:06:35.753 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+11:06:35.754 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+11:06:35.759 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+11:06:35.863 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11:06:35.865 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+11:06:35.960 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+11:06:35.963 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+11:06:35.964 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:06:35.964 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:06:35.964 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+11:06:36.291 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [/home/zhanghua/work/idea/lottery/out/production/classes/com/tiantian/mapper/UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+11:06:36.294 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+11:06:36.306 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:06:36.313 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [/home/zhanghua/work/idea/lottery/out/production/classes/com/tiantian/mapper/UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [/home/zhanghua/work/idea/lottery/out/production/classes/com/tiantian/mapper/UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1330)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1428)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 47 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5a916ad.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5a916ad$$FastClassBySpringCGLIB$$6948fd87.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5a916ad.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 48 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/home/zhanghua/work/idea/lottery/out/production/classes/mapper/AwardnumberMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521)
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:265)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.auto.entity.Awardnumber'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.auto.entity.Awardnumber
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 69 common frames omitted
+11:25:36.475 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 15879 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+11:25:36.478 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+11:25:36.529 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@38716e0f: startup date [Sat May 12 11:25:36 CST 2018]; root of context hierarchy
+11:25:37.131 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.test]' package. Please check your configuration.
+11:25:37.716 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+11:25:37.726 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+11:25:37.733 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+11:25:37.733 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+11:25:37.739 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+11:25:37.845 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11:25:37.847 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+11:25:37.938 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+11:25:37.942 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+11:25:37.942 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:25:37.942 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:25:37.942 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+11:25:38.185 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$36f645c3.extendMessageConverters(Ljava/util/List;)V
+11:25:38.188 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+11:25:38.200 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:25:38.206 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$36f645c3.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$36f645c3.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$36f645c3.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$94f27ade.CGLIB$requestMappingHandlerAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$94f27ade$$FastClassBySpringCGLIB$$a39f2150.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$94f27ade.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+11:26:35.878 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 20404 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+11:26:35.881 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+11:26:35.913 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45968e9b: startup date [Sat May 12 11:26:35 CST 2018]; root of context hierarchy
+11:26:36.005 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+11:26:36.251 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:204)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:152)
+	... 13 common frames omitted
+11:29:33.944 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 1546 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+11:29:33.948 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+11:29:34.001 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fd5e2dc: startup date [Sat May 12 11:29:34 CST 2018]; root of context hierarchy
+11:29:34.613 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.test]' package. Please check your configuration.
+11:29:35.146 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+11:29:35.156 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+11:29:35.161 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+11:29:35.162 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+11:29:35.167 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+11:29:35.278 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11:29:35.280 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+11:29:35.382 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+11:29:35.385 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+11:29:35.386 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:29:35.386 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:29:35.386 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+11:29:35.633 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$11740eb1.extendMessageConverters(Ljava/util/List;)V
+11:29:35.635 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+11:29:35.648 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:29:35.654 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$11740eb1.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$11740eb1.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$11740eb1.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$6f7043cc.CGLIB$requestMappingHandlerAdapter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$6f7043cc$$FastClassBySpringCGLIB$$70a12f46.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$6f7043cc.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+11:30:16.212 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 7048 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+11:30:16.215 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+11:30:16.264 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7f8043cf: startup date [Sat May 12 11:30:16 CST 2018]; root of context hierarchy
+11:30:16.829 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.test]' package. Please check your configuration.
+11:30:17.422 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+11:30:17.431 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+11:30:17.436 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+11:30:17.437 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+11:30:17.442 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+11:30:17.567 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11:30:17.569 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+11:30:17.670 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+11:30:17.673 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+11:30:17.674 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:30:17.674 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:30:17.674 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+11:30:17.907 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1f6bb268.extendMessageConverters(Ljava/util/List;)V
+11:30:17.909 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+11:30:17.924 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:30:17.931 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1f6bb268.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1f6bb268.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1f6bb268.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$7d67e783.CGLIB$requestMappingHandlerAdapter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$7d67e783$$FastClassBySpringCGLIB$$6d7a0159.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$7d67e783.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+11:30:39.998 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 10678 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+11:30:40.000 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+11:30:40.053 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43275478: startup date [Sat May 12 11:30:40 CST 2018]; root of context hierarchy
+11:30:40.731 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.test]' package. Please check your configuration.
+11:30:41.408 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+11:30:41.417 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+11:30:41.423 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+11:30:41.423 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+11:30:41.429 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+11:30:41.560 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11:30:41.563 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+11:30:41.658 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+11:30:41.661 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+11:30:41.661 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:30:41.661 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:30:41.662 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+11:30:41.871 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$3dc9c2c6.extendMessageConverters(Ljava/util/List;)V
+11:30:41.874 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+11:30:41.886 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+11:30:41.892 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$3dc9c2c6.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$3dc9c2c6.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$3dc9c2c6.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$9bc5f7e1.CGLIB$requestMappingHandlerAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$9bc5f7e1$$FastClassBySpringCGLIB$$201e4356.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$9bc5f7e1.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+11:36:08.565 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.test.ProjectTest], using SpringBootContextLoader
+11:36:08.572 logback [main] INFO  o.s.t.c.s.AbstractContextLoader
+				- Could not detect default resource locations for test class [com.test.ProjectTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:36:08.678 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+11:36:08.700 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@43ee72e6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@23529fee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4fe767f3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2805c96b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@184cf7cf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2fd6b6c7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5bfa9431, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5db250b4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@223f3642, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@38c5cc4c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37918c79, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78e94dcf]
+11:36:08.728 logback [main] ERROR o.s.test.context.TestContextManager
+				- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@43ee72e6] to prepare test instance [com.test.ProjectTest@5dd6264]
+java.lang.NoSuchMethodError: org.springframework.boot.SpringApplication.<init>([Ljava/lang/Object;)V
+	at org.springframework.boot.test.context.SpringBootContextLoader.getSpringApplication(SpringBootContextLoader.java:130)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:93)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+11:36:26.819 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.test.ProjectTest], using SpringBootContextLoader
+11:36:26.824 logback [main] INFO  o.s.t.c.s.AbstractContextLoader
+				- Could not detect default resource locations for test class [com.test.ProjectTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:36:26.895 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+11:36:26.912 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6293abcc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7995092a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7fc2413d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f8c1ddd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@70be0a2b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2133814f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4c15e7fd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23986957, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23f7d05d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1e730495, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7d3a22a9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1d082e88]
+11:36:26.938 logback [main] ERROR o.s.test.context.TestContextManager
+				- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6293abcc] to prepare test instance [com.test.ProjectTest@2f112965]
+java.lang.NoSuchMethodError: org.springframework.boot.SpringApplication.<init>([Ljava/lang/Object;)V
+	at org.springframework.boot.test.context.SpringBootContextLoader.getSpringApplication(SpringBootContextLoader.java:130)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:93)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+11:36:26.947 logback [main] ERROR o.s.test.context.TestContextManager
+				- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6293abcc] to prepare test instance [com.test.ProjectTest@48fa0f47]
+java.lang.NoSuchMethodError: org.springframework.boot.SpringApplication.<init>([Ljava/lang/Object;)V
+	at org.springframework.boot.test.context.SpringBootContextLoader.getSpringApplication(SpringBootContextLoader.java:130)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:93)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+14:13:00.975 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 492 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:13:00.980 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:13:01.062 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@58654942: startup date [Sat May 12 14:13:01 CST 2018]; root of context hierarchy
+14:13:02.711 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:13:02.727 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:13:02.735 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:13:02.736 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:13:02.745 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:13:02.901 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:13:02.904 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:13:03.037 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:13:03.042 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:13:03.043 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:13:03.043 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:13:03.043 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:13:03.859 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$af7f23b8.extendMessageConverters(Ljava/util/List;)V
+14:13:03.863 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:13:03.881 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:13:03.892 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$af7f23b8.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$af7f23b8.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$af7f23b8.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$d7b58d3.CGLIB$requestMappingHandlerAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$d7b58d3$$FastClassBySpringCGLIB$$1e671683.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$d7b58d3.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:15:01.757 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.test.ProjectTest], using SpringBootContextLoader
+14:15:01.770 logback [main] INFO  o.s.t.c.s.AbstractContextLoader
+				- Could not detect default resource locations for test class [com.test.ProjectTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:15:01.876 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+14:15:01.905 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper
+				- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2fd6b6c7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5bfa9431, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5db250b4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@223f3642, org.springframework.test.context.transaction.TransactionalTestExecutionListener@38c5cc4c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37918c79, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@78e94dcf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@233fe9b6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@358ee631, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ec756bd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3c72f59f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@60dcc9fe]
+14:15:01.941 logback [main] ERROR o.s.test.context.TestContextManager
+				- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2fd6b6c7] to prepare test instance [com.test.ProjectTest@7ee955a8]
+java.lang.NoSuchMethodError: org.springframework.boot.SpringApplication.<init>([Ljava/lang/Object;)V
+	at org.springframework.boot.test.context.SpringBootContextLoader.getSpringApplication(SpringBootContextLoader.java:130)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:93)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+14:17:51.212 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 23222 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:17:51.216 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:17:51.294 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39196486: startup date [Sat May 12 14:17:51 CST 2018]; root of context hierarchy
+14:17:52.971 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:17:52.986 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:17:52.995 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:17:52.995 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:17:53.004 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:17:53.146 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:17:53.149 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:17:53.305 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:17:53.311 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:17:53.311 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:17:53.311 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:17:53.311 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:17:54.118 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$9cd16a6e.extendMessageConverters(Ljava/util/List;)V
+14:17:54.123 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:17:54.141 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:17:54.152 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$9cd16a6e.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$9cd16a6e.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$9cd16a6e.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$facd9f89.CGLIB$requestMappingHandlerAdapter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$facd9f89$$FastClassBySpringCGLIB$$304f7248.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$facd9f89.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:18:46.033 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 27351 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:18:46.038 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:18:46.111 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a6f4d2c: startup date [Sat May 12 14:18:46 CST 2018]; root of context hierarchy
+14:18:46.875 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.test]' package. Please check your configuration.
+14:18:47.774 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:18:47.789 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:18:47.797 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:18:47.797 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:18:47.806 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:18:47.942 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:18:47.945 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:18:48.081 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:18:48.087 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:18:48.087 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:18:48.087 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:18:48.087 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:18:48.443 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$48382c18.extendMessageConverters(Ljava/util/List;)V
+14:18:48.447 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:18:48.466 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:18:48.477 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$48382c18.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$48382c18.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$48382c18.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$a6346133.CGLIB$requestMappingHandlerAdapter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$a6346133$$FastClassBySpringCGLIB$$f1ae734f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$a6346133.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:20:07.215 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 1171 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:20:07.219 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:20:07.294 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ef18c11: startup date [Sat May 12 14:20:07 CST 2018]; root of context hierarchy
+14:20:08.132 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.tiantian.controller, com.test]' package. Please check your configuration.
+14:20:08.979 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:20:08.994 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:20:09.002 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:20:09.003 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:20:09.012 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:20:09.155 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:20:09.159 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:20:09.296 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:20:09.301 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:20:09.301 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:20:09.301 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:20:09.301 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:20:09.662 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$f0b39c90.extendMessageConverters(Ljava/util/List;)V
+14:20:09.666 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:20:09.685 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:20:09.696 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$f0b39c90.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$f0b39c90.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$f0b39c90.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$4eafd1ab.CGLIB$requestMappingHandlerAdapter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$4eafd1ab$$FastClassBySpringCGLIB$$b6b2e3a2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$4eafd1ab.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:20:38.228 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 3539 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:20:38.233 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:20:38.313 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a73b810: startup date [Sat May 12 14:20:38 CST 2018]; root of context hierarchy
+14:20:39.249 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.tiantian.controller, com.test]' package. Please check your configuration.
+14:20:40.301 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:20:40.317 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:20:40.326 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:20:40.327 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:20:40.338 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:20:40.501 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:20:40.505 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:20:40.695 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:20:40.701 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:20:40.702 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:20:40.702 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:20:40.702 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:20:41.161 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$2b70661f.extendMessageConverters(Ljava/util/List;)V
+14:20:41.166 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:20:41.188 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:20:41.202 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$2b70661f.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$2b70661f.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$2b70661f.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$896c9b3a.CGLIB$requestMappingHandlerAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$896c9b3a$$FastClassBySpringCGLIB$$f507e523.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$896c9b3a.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:39:30.792 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 1990 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:39:30.797 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:39:30.870 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@12531e0d: startup date [Sat May 12 14:39:30 CST 2018]; root of context hierarchy
+14:39:31.632 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.tiantian.controller, com.test]' package. Please check your configuration.
+14:39:32.509 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:39:32.524 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:39:32.533 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:39:32.533 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:39:32.542 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:39:32.693 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:39:32.697 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:39:32.848 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:39:32.853 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:39:32.853 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:39:32.854 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:39:32.854 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:39:33.200 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1c140769.extendMessageConverters(Ljava/util/List;)V
+14:39:33.204 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:39:33.224 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:39:33.235 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1c140769.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1c140769.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$1c140769.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$7a103c84.CGLIB$requestMappingHandlerAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$7a103c84$$FastClassBySpringCGLIB$$c5c65a93.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$7a103c84.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:40:55.543 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 8490 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:40:55.547 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:40:55.623 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5217953d: startup date [Sat May 12 14:40:55 CST 2018]; root of context hierarchy
+14:40:56.379 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.tiantian.controller, com.test]' package. Please check your configuration.
+14:40:57.250 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:40:57.264 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:40:57.272 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:40:57.273 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:40:57.282 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:40:57.432 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:40:57.436 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:40:57.582 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:40:57.588 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:40:57.588 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:40:57.588 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:40:57.588 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:40:57.938 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c6ed2bde.extendMessageConverters(Ljava/util/List;)V
+14:40:57.942 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:40:57.962 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:40:57.973 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c6ed2bde.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c6ed2bde.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c6ed2bde.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$24e960f9.CGLIB$requestMappingHandlerAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$24e960f9$$FastClassBySpringCGLIB$$cb2386e1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$24e960f9.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted
+14:49:48.704 logback [restartedMain] INFO  com.test.AppStart
+				- Starting AppStart on xinzhiniepan with PID 25832 (/home/zhanghua/work/idea/lottery/out/test/classes started by zhanghua in /home/zhanghua/work/idea/lottery)
+14:49:48.708 logback [restartedMain] INFO  com.test.AppStart
+				- No active profile set, falling back to default profiles: default
+14:49:48.775 logback [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77b364b1: startup date [Sat May 12 14:49:48 CST 2018]; root of context hierarchy
+14:49:49.583 logback [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner
+				- No MyBatis mapper was found in '[com.tiantian.controller, com.test]' package. Please check your configuration.
+14:49:50.448 logback [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+				- Tomcat initialized with port(s): 8080 (http)
+14:49:50.462 logback [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+				- Initializing ProtocolHandler ["http-nio-8080"]
+14:49:50.470 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Starting service [Tomcat]
+14:49:50.471 logback [restartedMain] INFO  o.a.catalina.core.StandardEngine
+				- Starting Servlet Engine: Apache Tomcat/8.5.15
+14:49:50.480 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener
+				- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14:49:50.616 logback [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner
+				- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14:49:50.619 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+				- Initializing Spring embedded WebApplicationContext
+14:49:50.774 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean
+				- Servlet dispatcherServlet mapped to [/]
+14:49:50.779 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'characterEncodingFilter' to: [/*]
+14:49:50.780 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:49:50.780 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:49:50.780 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean
+				- Mapping filter: 'requestContextFilter' to: [/*]
+14:49:51.129 logback [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+				- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c73ffddb.extendMessageConverters(Ljava/util/List;)V
+14:49:51.133 logback [restartedMain] INFO  o.a.catalina.core.StandardService
+				- Stopping service [Tomcat]
+14:49:51.152 logback [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+				- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:49:51.164 logback [restartedMain] ERROR o.s.boot.SpringApplication
+				- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c73ffddb.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:587)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.test.AppStart.main(AppStart.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Factory method 'requestMappingHandlerAdapter' threw exception; nested exception is java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c73ffddb.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579)
+	... 23 common frames omitted
+Caused by: java.lang.AbstractMethodError: org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$$EnhancerBySpringCGLIB$$c73ffddb.extendMessageConverters(Ljava/util/List;)V
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.extendMessageConverters(WebMvcConfigurerComposite.java:143)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.extendMessageConverters(DelegatingWebMvcConfiguration.java:122)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.getMessageConverters(WebMvcConfigurationSupport.java:718)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.requestMappingHandlerAdapter(WebMvcConfigurationSupport.java:525)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration.requestMappingHandlerAdapter(WebMvcAutoConfiguration.java:467)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$253c32f6.CGLIB$requestMappingHandlerAdapter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$253c32f6$$FastClassBySpringCGLIB$$ad05f8a0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration$$EnhancerBySpringCGLIB$$253c32f6.requestMappingHandlerAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 24 common frames omitted

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.auto.mapper.AwardnumberMapper">
-  <resultMap id="BaseResultMap" type="com.auto.entity.Awardnumber">
+<mapper namespace="com.tiantian.mapper.AwardnumberMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Awardnumber">
     <id column="anId" jdbcType="BIGINT" property="anId" />
     <result column="anNo" jdbcType="BIGINT" property="anNo" />
     <result column="gId" jdbcType="BIGINT" property="gId" />
@@ -26,7 +26,7 @@
     delete from awardnumber
     where anId = #{anId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.auto.entity.Awardnumber">
+  <insert id="insert" parameterType="com.tiantian.pojo.Awardnumber">
     insert into awardnumber (anId, anNo, gId, 
       anTime, gNumber1, gNumber2, 
       gNumber3, gNumber4, gNumber5, 
@@ -36,7 +36,7 @@
       #{gNumber3,jdbcType=INTEGER}, #{gNumber4,jdbcType=INTEGER}, #{gNumber5,jdbcType=INTEGER}, 
       #{gNumber6,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.auto.entity.Awardnumber">
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Awardnumber">
     insert into awardnumber
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="anId != null">
@@ -103,7 +103,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.auto.entity.Awardnumber">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Awardnumber">
     update awardnumber
     <set>
       <if test="anNo != null">
@@ -136,7 +136,7 @@
     </set>
     where anId = #{anId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.auto.entity.Awardnumber">
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Awardnumber">
     update awardnumber
     set anNo = #{anNo,jdbcType=BIGINT},
       gId = #{gId,jdbcType=BIGINT},

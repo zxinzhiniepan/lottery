@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.auto.mapper.ManagerMapper">
-  <resultMap id="BaseResultMap" type="com.auto.entity.Manager">
+<mapper namespace="com.tiantian.mapper.ManagerMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Manager">
     <id column="mId" jdbcType="BIGINT" property="mId" />
     <result column="uId" jdbcType="BIGINT" property="uId" />
     <result column="recharge" jdbcType="TINYINT" property="recharge" />
@@ -24,7 +24,7 @@
     delete from manager
     where mId = #{mId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.auto.entity.Manager">
+  <insert id="insert" parameterType="com.tiantian.pojo.Manager">
     insert into manager (mId, uId, recharge, 
       modifiedPwd, subordinate, bill, 
       transactionLog, addTime)
@@ -32,7 +32,7 @@
       #{modifiedPwd,jdbcType=TINYINT}, #{subordinate,jdbcType=TINYINT}, #{bill,jdbcType=TINYINT}, 
       #{transactionLog,jdbcType=TINYINT}, #{addTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.auto.entity.Manager">
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Manager">
     insert into manager
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="mId != null">
@@ -87,7 +87,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.auto.entity.Manager">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Manager">
     update manager
     <set>
       <if test="uId != null">
@@ -114,7 +114,7 @@
     </set>
     where mId = #{mId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.auto.entity.Manager">
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Manager">
     update manager
     set uId = #{uId,jdbcType=BIGINT},
       recharge = #{recharge,jdbcType=TINYINT},

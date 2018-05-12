@@ -1,10 +1,12 @@
 package com.tiantian.pojo;
 
 
+import com.tiantian.util.PojoModel;
+
 import java.io.Serializable;
 import java.util.Date;
 
-public class Betonnumber implements Serializable {
+public class Betonnumber extends PojoModel implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long bonId;
   private Long boId;

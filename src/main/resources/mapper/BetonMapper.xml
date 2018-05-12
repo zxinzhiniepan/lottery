@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.auto.mapper.BetonMapper">
-  <resultMap id="BaseResultMap" type="com.auto.entity.Beton">
+<mapper namespace="com.tiantian.mapper.BetonMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Beton">
     <id column="boId" jdbcType="BIGINT" property="boId" />
     <result column="uId" jdbcType="BIGINT" property="uId" />
     <result column="anId" jdbcType="BIGINT" property="anId" />
@@ -20,13 +20,13 @@
     delete from beton
     where boId = #{boId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.auto.entity.Beton">
+  <insert id="insert" parameterType="com.tiantian.pojo.Beton">
     insert into beton (boId, uId, anId, 
       boTime)
     values (#{boId,jdbcType=BIGINT}, #{uId,jdbcType=BIGINT}, #{anId,jdbcType=BIGINT}, 
       #{boTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.auto.entity.Beton">
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Beton">
     insert into beton
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="boId != null">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.auto.entity.Beton">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Beton">
     update beton
     <set>
       <if test="uId != null">
@@ -72,7 +72,7 @@
     </set>
     where boId = #{boId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.auto.entity.Beton">
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Beton">
     update beton
     set uId = #{uId,jdbcType=BIGINT},
       anId = #{anId,jdbcType=BIGINT},

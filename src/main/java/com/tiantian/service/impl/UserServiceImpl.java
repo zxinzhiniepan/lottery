@@ -15,11 +15,13 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> findAllUser() {
-        return userMapper.getUserList();
+        return userMapper.selectAll();
     }
 
     @Override
-    public List<User> findAll() {
-        return userMapper.queryAllUser();
+    public User findUserById(Long id) {
+        return userMapper.selectByPrimaryKey(id);
     }
+
+
 }

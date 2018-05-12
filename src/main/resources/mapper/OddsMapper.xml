@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.auto.mapper.OddsMapper">
-  <resultMap id="BaseResultMap" type="com.auto.entity.Odds">
+<mapper namespace="com.tiantian.mapper.OddsMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Odds">
     <id column="oId" jdbcType="BIGINT" property="oId" />
     <result column="pId" jdbcType="BIGINT" property="pId" />
     <result column="oNumber" jdbcType="INTEGER" property="oNumber" />
@@ -20,13 +20,13 @@
     delete from odds
     where oId = #{oId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.auto.entity.Odds">
+  <insert id="insert" parameterType="com.tiantian.pojo.Odds">
     insert into odds (oId, pId, oNumber, 
       oRate)
     values (#{oId,jdbcType=BIGINT}, #{pId,jdbcType=BIGINT}, #{oNumber,jdbcType=INTEGER}, 
       #{oRate,jdbcType=DECIMAL})
   </insert>
-  <insert id="insertSelective" parameterType="com.auto.entity.Odds">
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Odds">
     insert into odds
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="oId != null">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.auto.entity.Odds">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Odds">
     update odds
     <set>
       <if test="pId != null">
@@ -72,7 +72,7 @@
     </set>
     where oId = #{oId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.auto.entity.Odds">
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Odds">
     update odds
     set pId = #{pId,jdbcType=BIGINT},
       oNumber = #{oNumber,jdbcType=INTEGER},

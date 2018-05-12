@@ -1,9 +1,11 @@
 package com.tiantian.pojo;
 
 
+import com.tiantian.util.PojoModel;
+
 import java.io.Serializable;
 
-public class Playlaw implements Serializable {
+public class Playlaw extends PojoModel implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long pId;
   private Long gId;

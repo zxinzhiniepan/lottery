@@ -1,10 +1,12 @@
 package com.tiantian.pojo;
 
 
+import com.tiantian.util.PojoModel;
+
 import java.io.Serializable;
 import java.util.Date;
 
-public class User implements Serializable {
+public class User extends PojoModel implements Serializable {
   private static final long serialVersionUID = 1L;
   private Long uId;
   private String uName;
@@ -99,4 +101,5 @@ public class User implements Serializable {
   public void setBalance(Double balance) {
     this.balance = balance;
   }
+
 }
