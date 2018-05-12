@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>六合彩</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <style>
+            header {
+                position: relative;
+                height: 50px;
+                background: #c84948;
+            }
+
+            .headtop {
+                margin: 0;
+                padding: 0;
+            }
+
+            .headtop > a {
+                position: absolute;
+                display: inline-block;
+            }
+
+            .headtop > a:first-child {
+                top: 10px;
+                left: 15px;
+                width: 28px;
+                height: 28px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .headtop > a:last-child {
+                top: 10px;
+                right: 35px;
+                display: inline-block;
+                background-size: cover;;
+                font-size: 16px;
+                color: #FFF5EE;
+                padding: 5px;
+            }
+
+            .headtop > h4 {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 21px;
+                color: #fff;
+            }
+
+            .container {
+                margin-top: 20px;
+                background-color: white;
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+
+            /**/
+            .list {
+                height: 36px;
+                /*border: 1px dashed black;*/
+                position: relative;
+            }
+
+            /*圆的公共样式*/
+            .red, .blue, .green {
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+                position: absolute;
+                top: 5px;
+            }
+
+            /*红色圆*/
+            .red {
+                background-color: #ed1a1a;
+            }
+
+            /*蓝色圆*/
+            .blue {
+                background-color: #677ef5;
+            }
+
+            /*绿色圆*/
+            .green {
+                background-color: #20cb09;
+            }
+
+            /*数字*/
+            .list span {
+                position: absolute;
+                top: 5px;
+                left: 6px;
+                color: white;
+            }
+
+            .row {
+                text-align: center;
+            }
+
+            .content {
+                /*border:1px dashed black;*/
+                padding: 10px 0px;
+                height: 50px;
+                font-size: 16px;
+                font-weight: 600;
+                border-bottom: 1px solid #d6d6d6;
+            }
+
+            .money {
+                width: 60px;
+                border: 1px solid #cccccc;
+                text-indent: 2px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+            }
+
+            /*提交按钮*/
+            .submit {
+                width: 80%;
+                margin-top: 10px;
+            }
+
+            /*弹出框位置*/
+            #my-modal {
+                margin-top: 100px;
+            }
+            /*已购买提示信息*/
+            .alert {
+                background-color: #e3e3e3;
+                padding: 20px 50px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                position: fixed;
+                top: 50%;
+                margin-top: -100px;
+                left: 50%;
+                margin-left: -90px;
+                font-size: 20px;
+                display: none;
+            }
+
+            /*已购买*/
+            .glyphicon-ok {
+                color: #ff8647;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="headtop">
+            <a href="lottery.html" class="glyphicon glyphicon-menu-left"></a>
+            <h4>色波选项</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <div class="container">
+            <!--红色波-->
+            <div class="row">
+                <div class="list col-xs-2">
+                    <div class="red"><span>01</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>02</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>07</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>08</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>12</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>13</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>18</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>19</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>23</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>24</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>29</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>30</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>34</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>35</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>40</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>45</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="red"><span>46</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content col-xs-3">红色波</div>
+                <div class="content col-xs-4">赔率：2.7</div>
+                <div class="content col-xs-5">金额：<input class="money" data="红" name="" type="text"/></div>
+            </div>
+
+            <!--蓝色波-->
+            <div class="row">
+                <div class="list col-xs-2">
+                    <div class="blue"><span>03</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>04</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>09</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>10</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>14</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>15</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>20</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>25</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>26</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>31</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>36</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>37</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>41</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>42</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>47</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="blue"><span>48</span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="content col-xs-3">蓝色波</div>
+                <div class="content col-xs-4">赔率：2.85</div>
+                <div class="content col-xs-5">金额：<input class="money" data="蓝" name="" type="text"/></div>
+            </div>
+
+            <!--绿色波-->
+            <div class="row">
+                <div class="list col-xs-2">
+                    <div class="green"><span>05</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>06</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>11</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>16</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>17</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>21</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>22</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>27</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>28</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>32</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>33</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>38</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>39</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>43</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>44</span></div>
+                </div>
+                <div class="list col-xs-2">
+                    <div class="green"><span>49</span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="content col-xs-3">绿色波</div>
+                <div class="content col-xs-4">赔率：2.85</div>
+                <div class="content col-xs-5">金额：<input class="money" data="绿" name="" type="text"/></div>
+            </div>
+            <div class="row">
+                <button class="btn btn-info btn-lg submit">提&nbsp;交</button>
+            </div>
+        </div>
+        <!--弹出框 bootstrap组件-->
+        <div class="modal" id="my-modal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>请确认下注金额</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid alert-container">
+                            <div class="row alert-title-wrap">
+                                <div class="col-xs-6 alert-title">色波</div>
+                                <div class="col-xs-6 alert-title">金额</div>
+                            </div>
+                            <div class="row alert-info-wrap">
+                                <!--<div class="col-xs-6 alert-info-content">红</div>
+                                <div class="col-xs-6 alert-info-content">10</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <button class="btn btn-danger cancel" data-dismiss="modal" style="margin-right: 20px">取消
+                        </button>
+                        <button class="btn btn-info ok" data-dismiss="modal" style="margin-left: 20px">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert">
+            <div class="alert-content">
+                <i class="glyphicon glyphicon-ok"></i>&nbsp;已购买
+            </div>
+        </div>
+        <script src="../../js/jquery-2.0.3.min.js"></script>
+        <script src="../../js/bootstrap.js"></script>
+        <script type="text/javascript">
+            //点击提交按钮
+            $('.submit').on('click', function () {
+                $('.alert-info-wrap').html('');
+                //遍历所有输入值
+                var success = true;
+                //计算空值的数量
+                var i = 0;
+                $('.money').each(function () {
+                    var money = $(this).val();
+                    if (money == null || money == '') {
+                        ++i;
+                        return;
+                    }
+                    //金额合法添加到弹出框
+                    if (check(money, $(this))) {
+                        $('.alert-info-wrap').append('<div class="col-xs-6 alert-info-content">' + $(this).attr('data') + '</div>\n' +
+                            '                                    <div class="col-xs-6 alert-info-content">' + money + '</div>');
+                    } else {
+                        success = false;
+                        return false;
+                    }
+                });
+                if(success && i != 3){
+                    //each循环 success为true所有金额正确显示弹出框
+                    $('#my-modal').modal('show');
+                }
+            });
+            // 确认选号后跳转页面
+            $('.ok').on('click', function () {
+                $('.alert').fadeIn();
+                //弹出已购买提示
+                setTimeout(function () {
+                    $('.alert').fadeOut('slow');
+                }, 1500);
+                $('.money').val('');
+            });
+
+            //校验金额
+            function check(money, object) {
+                var moneyTest = /^\d+$/;
+                if (money.indexOf('.') >= 0) {
+                    alert('请购买整数金额');
+                    object.val(null);
+                    return false;
+                }
+                if (moneyTest.test(money)) {
+                    //输入格式正确
+                    //判断金额是否低于两元
+                    if (money < 2) {
+                        object.val(null);
+                        alert('下注金额最低两元');
+                        return false;
+                    } else if (money > 2000) {
+                        alert('最高下注2000金额');
+                        object.val(null);
+                        return false;
+                    }
+                    //格式正确且金额合法
+                    return true;
+                }
+                //不符合格式
+                else {
+                    object.val(null);
+                    alert('输入金额有误');
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

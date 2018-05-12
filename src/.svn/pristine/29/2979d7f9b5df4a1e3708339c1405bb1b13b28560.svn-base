@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>提现</title>
+
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/iconfont.css">
+        <style>
+            header {
+                position: relative;
+                height: 50px;
+                background: #c84948;
+            }
+
+            .headtop {
+                margin: 0;
+                padding: 0;
+            }
+
+            .headtop > a {
+                position: absolute;
+                display: inline-block;
+            }
+
+            .headtop > a:first-child {
+                top: 10px;
+                left: 15px;
+                width: 28px;
+                height: 28px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .headtop > a:last-child {
+                top: 10px;
+                right: 35px;
+                display: inline-block;
+                background-size: cover;;
+                font-size: 16px;
+                color: #FFF5EE;
+                padding: 5px;
+            }
+
+            .headtop > h4 {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 21px;
+                color: #fff;
+            }
+
+            .content {
+                padding: 0px 10%;
+                margin-top: 50px;
+            }
+
+            /*布局*/
+            .layout {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                width: 100%;
+                margin-top: 50px;
+                text-align: center;
+                font-size: 25px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+            }
+
+            /*logo大小*/
+            .iconfont {
+                font-size: 25px;
+            }
+
+            /*弹出框组件距离顶部的位置*/
+            #modal_1,#modal_2 {
+                margin-top: 100px;
+            }
+
+            /*输入框*/
+            .row {
+                text-align: center;
+            }
+
+            .input {
+                width: 100%;
+                height: 50px;
+                outline: none;
+                text-indent: 5px;
+                font-size: 16px;
+                border: 1px solid #d1d1d1;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="headtop">
+            <a href="MySubject.html" class="glyphicon glyphicon-menu-left"></a>
+            <h4>选择提现方式</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <div class="content">
+            <div class="layout btn btn-danger" data-toggle="modal" data-target="#modal_1" data-backdrop="true">
+                <i class="iconfont icon-weixinzhifu"></i>&nbsp;微信提现&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="layout btn btn-danger zhifubao" data-toggle="modal" data-target="#modal_2" data-backdrop="static">
+                <i class="iconfont icon-zhifubao"></i>&nbsp;支付宝提现
+            </div>
+            <a href="card-withdrawal.html">
+                <div class="layout btn btn-danger">
+                    <i class="iconfont icon-yinxingqia3"></i>&nbsp;银行卡提现
+                </div>
+            </a>
+        </div>
+        <!--微信二维码弹出框-->
+        <div class="modal" id="modal_1" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="title" style="display: inline-block">客服微信二维码</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="weixinerweima"><img src="../../img/weixinerweima.png" alet="微信二维码" height="200px"/></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--支付宝支付弹出框bootstrap组件-->
+        <div class="modal" id="modal_2" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="title" style="display: inline-block">支付宝提现</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-bottom: 20px"><input class="input name" name=""
+                                                                                          type="text" placeholder="姓名"/>
+                                </div>
+                                <div class="col-xs-12" style="margin-bottom: 20px"><input class="input account1" name="" type="text" placeholder="账号"/>
+                                </div>
+                                <div class="col-xs-12"><input class="input account2" name="" type="text" placeholder="确认账号"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <a class="btn btn-danger cancel" data-dismiss="modal" style="margin-right: 20px">取消
+                        </a>
+                        <a class="btn btn-info ok" style="margin-left: 20px">确认</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/jquery-2.0.3.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+            /*点击确认按钮*/
+            $('.ok').bind('click', function () {
+                //姓名
+                name = $('.name').val();
+                //账号
+                account1 = $('.account1').val();
+                //确认账号
+                account2 = $('.account2').val();
+                if(name == null || name == '' || account1 == null || account1 == '' || account2 == null || account2 == ''){
+                    alert('请输入完整信息');
+                } else if (account1 != account2) {
+                    alert('两次输入的账号不一致')
+                } else {
+                    $.ajax({});
+                }
+            });
+        </script>
+    </body>
+</html>

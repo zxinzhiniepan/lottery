@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>登录</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/importbill.css">
+    <style>
+        body{
+            background-color : #de4c4c;
+        }
+        .form-wrap{
+            width: 90%;
+            margin-left:auto;
+            margin-right: auto;
+            margin-top: 50px;
+            /*border: 1px dashed white;*/
+            text-align: center;
+        }
+        /*input包裹标签div*/
+        .input-wrap{
+            /*border: 1px dashed white;*/
+            margin-bottom: 25px;
+            position: relative;
+        }
+        /*input标签*/
+        .input{
+            outline:none;
+            border: none;
+            text-indent: 20px;
+            color: white;
+            font-size: 18px;
+            background-color: rgba(202, 202, 202, 0.79);
+            width: 100%;
+            height: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+        }
+        /*输入框提示语*/
+        input::-webkit-input-placeholder{
+            color: white;
+        }
+        input:-moz-placeholder{
+            color:white;
+        }
+        input::-moz-placeholder{
+            color:white;
+         }
+        input:-ms-input-placeholder{
+            color:white;
+        }
+
+        /*图标*/
+        .icon{
+            position: absolute;
+            top:15px;
+            right:20px;
+            color: white;
+            font-size: 18px;
+        }
+        /*验证码*/
+        #v_container{
+            position: absolute;
+            top:10px;
+            right: 40px;
+        }
+        /*登录按钮*/
+        .btn-login{
+            text-indent: 0px;
+            font-size: 22px;
+            color: black;
+            background: -webkit-linear-gradient(to right, #fbf9bc , #efc01a);
+            background: -o-linear-gradient(to right, #fbf9bc, #efc01a);
+            background: -moz-linear-gradient(to right, #fbf9bc, #efc01a);
+            background: linear-gradient(to right, #fbf9bc , #efc01a);
+        }
+        /*忘记密码&注册*/
+        .forget-register{
+            display: inline-block;
+            /*border:1px dashed white;*/
+        }
+        div.forget-register > a{
+            color: white;
+            font-size: 18px;
+        }
+        .copyright>p{
+            margin-top: 50px;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-wrap">
+        <form class="login-form" action="index.html" method="post">
+            <div class="input-wrap">
+                <input class="input userName" name="userName" type="text" placeholder="账号"/>
+                <i class="icon glyphicon glyphicon-user"></i>
+            </div>
+            <div class="input-wrap">
+                <input class="input password" name="password" type="password" placeholder="密码"/>
+                <i class="icon glyphicon glyphicon-lock"></i>
+            </div>
+            <div class="input-wrap">
+                <input class="input code" name="code" type="text" placeholder="验证码"/>
+                <!--验证码-->
+                <div class="change-code" id="v_container" style="width:30%;height:30px;float: right;margin-right: 15px"></div>
+            </div>
+            <div class="input-wrap">
+                <input class="input btn-login" type="submit" value="登&nbsp;&nbsp;录" />
+            </div>
+            <div class="forget-register">
+                <a href="forget_pw.html">忘记密码</a><a>&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href="register.html">免费注册</a>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 新葡京娱乐场 Reserved</p>
+            </div>
+        </form>
+    </div>
+
+<script src="../../js/jquery-2.0.3.min.js"></script>
+<script src="../../js/gVerify.js"></script>
+<script>
+    var verifyCode = new GVerify("v_container");
+
+    $(".register_zc>p:first-child").click(function(){
+        var res = verifyCode.validate($("#code_input").val());
+        if(res){
+            alert("验证正确");
+        }else{
+            alert("验证码错误");
+        }})
+</script>
+</body>
+</html>

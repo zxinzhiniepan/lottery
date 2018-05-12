@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>投注详情</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    </head>
+    <style>
+        header {
+            position: relative;
+            height: 50px;
+            background: #ca454c;
+        }
+
+        .headtop {
+            margin: 0;
+            padding: 0;
+        }
+
+        .headtop > a {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 15px;
+            width: 28px;
+            height: 28px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .headtop > h4 {
+            text-align: center;
+            padding: 14px 0;
+            font-size: 21px;
+            color: #fff;
+        }
+        .container{
+            padding: 0px 15px;
+            padding-bottom: 20px;
+            margin-top: 30px;
+            background-color: white;
+        }
+        /*logo、title、金额、交易成功*/
+        .header{
+            width: 100%;
+            /*border: 1px dashed black;*/
+            text-align: center;
+            padding: 20px 0px;
+        }
+        /*图标、标题包裹div*/
+        .title-wrap{
+            display: inline-block;
+        }
+        /*图标*/
+        .logo{
+            height: 30px;
+            width: 30px;
+            margin: auto;
+            border: 1px dashed black;
+            float: left;
+        }
+        /*标题*/
+        .title{
+            display: inline-block;
+            /*border: 1px dashed black;*/
+            padding: 5px 0px;
+            color: black;
+        }
+        .total-money{
+            color: black;
+            font-size: 18px;
+        }
+        /*行*/
+        .row{
+            text-align: center;
+        }
+        /*圆*/
+        .num-wrap{
+            height: 25px;
+            width: 25px;
+            border:1px solid red;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        /*数字在圆中的位置*/
+        .num{
+            display: inline-block;
+            position: absolute;
+            top:2px;
+            left: 4px;
+        }
+        .money{
+            display: inline-block;
+            border: 1px solid #c1c1c1;
+            padding:0px 5px;
+            position: relative;
+            top:-7px;
+            left: 5px;
+            color: gray;
+        }
+    </style>
+    <header>
+        <div class="headtop">
+            <a href="Note_record.html" class="glyphicon glyphicon-menu-left"></a>
+            <h4>投注详情</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <div class="container">
+            <div class="header">
+                <div class="title-wrap">
+                    <div class="logo"></div>
+                    <div class="title">六合彩-特码</div>
+                </div>
+
+                <div class="total-money">-15</div>
+                <div class="state">交易成功</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="num-wrap"><span class="num">01</span></div><div class="money"><i class="glyphicon glyphicon-jpy"></i>100</div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="num-wrap"><span class="num">02</span></div><div class="money"><i class="glyphicon glyphicon-jpy"></i>100</div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="num-wrap"><span class="num">03</span></div><div class="money"><i class="glyphicon glyphicon-jpy"></i>100</div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="num-wrap"><span class="num">01</span></div><div class="money"><i class="glyphicon glyphicon-jpy"></i>100</div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="num-wrap"><span class="num">01</span></div><div class="money"><i class="glyphicon glyphicon-jpy"></i>100</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

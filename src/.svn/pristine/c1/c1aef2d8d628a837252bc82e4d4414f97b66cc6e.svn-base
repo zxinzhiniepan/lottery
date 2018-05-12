@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>银行卡提现</title>
+
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/iconfont.css">
+        <style>
+            header {
+                position: relative;
+                height: 50px;
+                background: #c84948;
+            }
+
+            .headtop {
+                margin: 0;
+                padding: 0;
+            }
+
+            .headtop > a {
+                position: absolute;
+                display: inline-block;
+            }
+
+            .headtop > a:first-child {
+                top: 10px;
+                left: 15px;
+                width: 28px;
+                height: 28px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .headtop > a:last-child {
+                top: 10px;
+                right: 35px;
+                display: inline-block;
+                background-size: cover;;
+                font-size: 16px;
+                color: #FFF5EE;
+                padding: 5px;
+            }
+
+            .headtop > h4 {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 21px;
+                color: #fff;
+            }
+
+            .content{
+                /*border: 1px dashed black;*/
+                background-color: white;
+                text-align: center;
+                margin-top: 100px;
+                padding-top: 20px;
+            }
+            .input-wrap{
+                height: 70px;
+            }
+            .input{
+                width: 80%;
+                height: 50px;
+                outline:none;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                border:1px solid #d1d1d1;
+                text-indent: 5px;
+            }
+            .submit{
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="headtop">
+            <a href="withdrawal.html" class="glyphicon glyphicon-menu-left"></a>
+            <h4>银行卡提现</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <div class="content">
+            <div class="input-wrap">
+                <input class="input name" name="" type="text" placeholder="持卡人姓名"/>
+            </div>
+            <div class="input-wrap">
+                <input class="input card-class" name="" type="text" placeholder="开户行"/>
+            </div>
+            <div class="input-wrap">
+                <input class="input card-num" name="" type="text" placeholder="卡号"/>
+            </div>
+            <div class="input-wrap">
+                <button class="input btn btn-info submit">提&nbsp;交</button>
+            </div>
+        </div>
+    </body>
+</html>
