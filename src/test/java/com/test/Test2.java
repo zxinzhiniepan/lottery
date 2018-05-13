@@ -15,7 +15,6 @@ import java.util.Date;
 public class Test2 {
     @Test
     public void test(){
-
         System.out.print(new Date());
     }
 }

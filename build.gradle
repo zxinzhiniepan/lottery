@@ -1,11 +1,19 @@
 plugins{
     id 'java'
     id 'war'
+    id 'idea'
+    id 'application'
+    id 'org.springframework.boot' version '1.5.4.RELEASE'
+
 }
+apply plugin: 'io.spring.dependency-management'
+
 group 'com.tiantian'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+
+mainClassName = 'com.tiantian.AppRun'
 
 repositories {
     mavenCentral()
@@ -13,7 +21,6 @@ repositories {
 
 ext{
     log4j2Version = "2.11.0"
-    springbootVersion = "1.5.4.RELEASE"
 }
 
 dependencies {
@@ -23,14 +30,51 @@ dependencies {
             "org.apache.logging.log4j:log4j-jul:${log4j2Version}",
     )
 
+    // spring boot
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+    // 单元测试
+    compile("junit:junit")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+    // 实现热部署
+    compile("org.springframework.boot:spring-boot-devtools",
+            "commons-codec:commons-codec",)
+    providedCompile("org.springframework:springloaded")
+
+   // jsp支持
+   compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+
+   // jackson
+   compile("com.fasterxml.jackson.core:jackson-databind",
+            "org.codehaus.jackson:jackson-mapper-asl:1.9.13",)
+
+   // jdk工具扩展
+   compile("commons-lang:commons-lang:2.6")
+
+   // 数据库连接工具
+   compile("mysql:mysql-connector-java",
+           "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0",)
+
+   // 分页插件
+   compile("com.github.pagehelper:pagehelper:4.1.0")
+
+   // 通用mapper
+   compile("tk.mybatis:mapper:3.3.4")
+
+    providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
+
+
 }
 
+/**
 test{
     useJUnitPlatform()
-    testLogging{
-        showExceptions = true
-        showStackTraces = true
-        showStandardStreams = true
-        events "started", "skipped", "failed", "standard_out"
-    }
+        testLogging{
+            showExceptions = true
+                showStackTraces = true
+                showStandardStreams = true
+                events "started", "skipped", "failed", "standard_out"
+        }
 }
+**/
