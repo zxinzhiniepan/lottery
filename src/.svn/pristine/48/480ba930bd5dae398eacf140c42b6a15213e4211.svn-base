@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>现金流水</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <style>
+            header {
+                position: relative;
+                height: 50px;
+                background: #ca454c;
+            }
+
+            .headtop {
+                margin: 0;
+                padding: 0;
+            }
+
+            .headtop > a {
+                position: absolute;
+                display: inline-block;
+            }
+
+            .headtop > a:first-child {
+                top: 10px;
+                left: 15px;
+                width: 28px;
+                height: 28px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .headtop > a:last-child {
+                top: 10px;
+                right: 35px;
+                display: inline-block;
+                background-size: cover;;
+                font-size: 16px;
+                color: #FFF5EE;
+                padding: 5px;
+            }
+
+            .headtop > h4 {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 21px;
+                color: #fff;
+            }
+
+            /*交易列表*/
+            .container{
+                margin-top: 30px;
+                background-color: white;
+            }
+            /*行*/
+            .row{
+                text-align: center;
+                padding: 5px 0px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            /*标题行*/
+            /*日期、交易类型、交易金额、余额*/
+            .title-wrap{
+                padding: 10px 0px;
+                border-bottom:none;
+            }
+            .title{
+                border-right: 1px solid #e0e0e0;
+                font-size: 16px;
+            }
+            div.title:last-of-type{
+                border-right:none
+            }
+            .row>div{
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="headtop">
+            <a href="MySubject.html" class="glyphicon glyphicon-menu-left"></a>
+            <h4>账户明细</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <section>
+            <div class="container">
+                <div class="row title-wrap">
+                    <div class="col-xs-3 title">日期</div>
+                    <div class="col-xs-3 title">交易类型</div>
+                    <div class="col-xs-3 title">交易金额</div>
+                    <div class="col-xs-3 title">余额</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">2018-4-20</div>
+                    <div class="col-xs-3">充值</div>
+                    <div class="col-xs-3">+200</div>
+                    <div class="col-xs-3">200.00</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">2018-4-21</div>
+                    <div class="col-xs-3">下注</div>
+                    <div class="col-xs-3">-20</div>
+                    <div class="col-xs-3">2000.00</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">2018-4-22</div>
+                    <div class="col-xs-3">中奖</div>
+                    <div class="col-xs-3">+1000</div>
+                    <div class="col-xs-3">2200</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">2018-4-22</div>
+                    <div class="col-xs-3">提现</div>
+                    <div class="col-xs-3">-1000</div>
+                    <div class="col-xs-3">0.00</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">2018-4-22</div>
+                    <div class="col-xs-3">客服</div>
+                    <div class="col-xs-3">-1000</div>
+                    <div class="col-xs-3">0.00</div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="../../js/jquery-2.0.3.min.js"></script>
+    <script src="../../js/jquery.combo.select.js"></script>
+    <script>
+        $('.row:odd').css('background-color',"#efefef")
+
+    </script>
+
+</html>

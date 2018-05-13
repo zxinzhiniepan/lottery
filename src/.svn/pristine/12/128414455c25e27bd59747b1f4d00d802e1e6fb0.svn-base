@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>用户信息</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+
+        <style type="text/css">
+            body{
+                width: 80%;
+                margin: auto;
+            }
+            #header{
+                text-align: center;
+                border-bottom: 1px solid #a8a8a8;
+                margin-bottom: 20px;
+            }
+            .list{
+                margin: auto;
+            }
+            tr>td:nth-of-type(1){
+                text-align: right;
+                /*border: 1px solid red;*/
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+            }
+            tr>td:nth-of-type(2){
+                /*border: 1px solid red;*/
+                padding-left: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h3>用户信息</h3>
+        </div>
+        <table class="list">
+            <tr>
+                <td>id:</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>账号:</td>
+                <td>503647515</td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td>账户余额:</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>联系方式:</td>
+                <td>18900709087</td>
+            </tr>
+            <tr>
+                <td>微信:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>邀请人:</td>
+                <td>616836354</td>
+            </tr>
+            <tr>
+                <td><a href="findUser.html"><input type="button" value="查看下线"/></a></td>
+                <td><input type="button" value="重置密码" data-toggle="modal" data-target="#my-modal"
+                           data-backdrop="static"/></td>
+            </tr>
+        </table>
+        <div class="modal" id="my-modal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4>重置密码</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <label>新密码：</label><input name="" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-info" data-dismiss="modal">确认</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/jquery-2.0.3.min.js"></script>
+        <script src="../../js/bootstrap.js"></script>
+
+    </body>
+
+</html>

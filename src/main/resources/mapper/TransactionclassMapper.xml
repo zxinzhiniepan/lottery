@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiantian.mapper.TransactionclassMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Transactionclass">
+    <id column="tcId" jdbcType="BIGINT" property="tcId" />
+    <result column="tcName" jdbcType="VARCHAR" property="tcName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    tcId, tcName
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from transactionclass
+    where tcId = #{tcId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from transactionclass
+    where tcId = #{tcId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tiantian.pojo.Transactionclass">
+    insert into transactionclass (tcId, tcName)
+    values (#{tcId,jdbcType=BIGINT}, #{tcName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Transactionclass">
+    insert into transactionclass
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tcId != null">
+        tcId,
+      </if>
+      <if test="tcName != null">
+        tcName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tcId != null">
+        #{tcId,jdbcType=BIGINT},
+      </if>
+      <if test="tcName != null">
+        #{tcName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Transactionclass">
+    update transactionclass
+    <set>
+      <if test="tcName != null">
+        tcName = #{tcName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where tcId = #{tcId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Transactionclass">
+    update transactionclass
+    set tcName = #{tcName,jdbcType=VARCHAR}
+    where tcId = #{tcId,jdbcType=BIGINT}
+  </update>
+</mapper>

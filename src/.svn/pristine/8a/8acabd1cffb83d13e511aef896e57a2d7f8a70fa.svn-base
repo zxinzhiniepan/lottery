@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>六合彩</title>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/importbill.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <style>
+            header {
+                position: relative;
+                height: 50px;
+                background: #c84948;
+            }
+
+            .headtop {
+                margin: 0;
+                padding: 0;
+            }
+
+            .headtop > a {
+                position: absolute;
+                display: inline-block;
+            }
+
+            .headtop > a:first-child {
+                top: 10px;
+                left: 15px;
+                width: 28px;
+                height: 28px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            .headtop > a:last-child {
+                top: 10px;
+                right: 35px;
+                display: inline-block;
+                background-size: cover;;
+                font-size: 16px;
+                color: #FFF5EE;
+                padding: 5px;
+            }
+
+            .headtop > h4 {
+                text-align: center;
+                padding: 14px 0;
+                font-size: 21px;
+                color: #fff;
+            }
+            .container{
+                background-color: white;
+                margin:20px 0px 20px 0px;
+            }
+            .row{
+                text-align: center;
+            }
+            .title{
+                padding-top: 10px;
+                padding-bottom:10px;
+                height: 40px;
+                padding-left: 5px;
+                font-size: 18px;
+                border-bottom: 1px solid #e1e1e1;
+            }
+            .content{
+                padding-top: 5px;
+                height: 38px;
+                font-size: 16px;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            /*金额输入框*/
+            .money {
+                width: 90%;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                border:1px solid #b0b0b0;
+                text-indent: 3px;
+            }
+            .btn-wrap{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            /*提交按钮*/
+            .submit{
+                width: 80%;
+            }
+            /*已购买提示信息*/
+            .alert {
+                background-color: #e3e3e3;
+                padding: 20px 50px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                position: fixed;
+                top: 50%;
+                margin-top: -100px;
+                left: 50%;
+                margin-left: -90px;
+                font-size: 20px;
+                display: none;
+            }
+            /*弹出框组件距离顶部的位置*/
+            #my-modal {
+                margin-top: 100px;
+            }
+
+            /*提示框*/
+            .alert-container {
+                text-align: center;
+            }
+
+            .alert-title {
+                padding: 5px 0px;
+            }
+
+            .alert-title:nth-of-type(2) {
+                border-right: 1px solid #e3e3e3;
+            }
+
+            .alert-info-wrap {
+                text-align: center;
+            }
+
+            /*已购买*/
+            .glyphicon-ok {
+                color: #ff8647;
+            }
+        </style>
+    </head>
+    <header>
+        <div class="headtop">
+            <a href="lottery.html" class="glyphicon glyphicon-menu-left"></a>
+            <h4>生肖选项</h4>
+        </div>
+    </header>
+    <body style="background: #f3f3f3">
+        <div class="container">
+            <div class="row tab">
+                <div class="title col-xs-2">生肖</div>
+                <div class="title col-xs-5">号码</div>
+                <div class="title col-xs-2">赔率</div>
+                <div class="title col-xs-3">金额</div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">鼠</div>
+                <div class="content col-xs-5">
+                    11,23,35,47
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="鼠" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">虎</div>
+                <div class="content col-xs-5">
+                    09,21,33,45
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="虎" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">龙</div>
+                <div class="content col-xs-5">
+                    07,19,31,43
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="龙" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">马</div>
+                <div class="content col-xs-5">
+                    05,17,29,41
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="马" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">猴</div>
+                <div class="content col-xs-5">
+                    03,15,27,39
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="猴" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">狗</div>
+                <div class="content col-xs-5">
+                    01,13,25,37,49
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="狗" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">牛</div>
+                <div class="content col-xs-5">
+                    10,22,34,46
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="牛" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">兔</div>
+                <div class="content col-xs-5">
+                    08,20,32,44
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="兔" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">蛇</div>
+                <div class="content col-xs-5">
+                    06,18,30,42
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="蛇" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">羊</div>
+                <div class="content col-xs-5">
+                    04,16,28,40
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="羊" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">鸡</div>
+                <div class="content col-xs-5">
+                    02,14,26,38
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="鸡" name="" type="text"/> </div>
+            </div>
+            <div class="row tab">
+                <div class="content col-xs-2">猪</div>
+                <div class="content col-xs-5">
+                    12,24,36,48
+                </div>
+                <div class="content col-xs-2">11.1</div>
+                <div class="content col-xs-3"><input class="money" data="猪" name="" type="text"/> </div>
+            </div>
+        </div>
+        <div class="btn-wrap">
+            <button class="btn btn-info btn-lg submit">提&nbsp;交</button>
+        </div>
+        <!--弹出框 bootstrap组件-->
+        <div class="modal" id="my-modal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>请确认选号及金额</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid alert-container">
+                            <div class="row alert-title-wrap">
+                                <div class="col-xs-3 alert-title">生肖</div>
+                                <div class="col-xs-3 alert-title">金额</div>
+                                <div class="col-xs-3 alert-title">生肖</div>
+                                <div class="col-xs-3 alert-title">金额</div>
+                            </div>
+                            <div class="row alert-info-wrap">
+                                <!--<div class="col-xs-3 alert-info-content">01</div>
+                                <div class="col-xs-3 alert-info-content">10</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <button class="btn btn-danger cancel" data-dismiss="modal" style="margin-right: 20px">取消
+                        </button>
+                        <button class="btn btn-info ok" data-dismiss="modal" style="margin-left: 20px">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert">
+            <div class="alert-content">
+                <i class="glyphicon glyphicon-ok"></i>&nbsp;已购买
+            </div>
+        </div>
+        <script src="../../js/jquery-2.0.3.min.js"></script>
+        <script src="../../js/bootstrap.js"></script>
+        <script type="text/javascript">
+            //每行的背景色
+            $('.tab:odd').css({"background":"#f0f0f0"});
+            //点击提交按钮
+            $('.submit').on('click', function () {
+                $('.alert-info-wrap').html('');
+                //遍历所有输入值
+                var success = true;
+                //计算空值的数量
+                var i = 0;
+                $('.money').each(function () {
+                    var money = $(this).val();
+                    if (money == null || money == '') {
+                        ++i;
+                        return;
+                    }
+                    //金额合法添加到弹出框
+                    if (check(money, $(this))) {
+                        $('.alert-info-wrap').append('<div class="col-xs-3 alert-info-content">' + $(this).attr('data') + '</div>\n' +
+                            '                                    <div class="col-xs-3 alert-info-content">' + money + '</div>');
+                    } else {
+                        success = false;
+                        return false;
+                    }
+                });
+                if(success && i != 12){
+                    //each循环 success为true所有金额正确显示弹出框
+                    $('#my-modal').modal('show');
+                }
+            });
+            // 确认选号后跳转页面
+            $('.ok').on('click', function () {
+                $('.alert').fadeIn();
+                //弹出已购买提示
+                setTimeout(function () {
+                    $('.alert').fadeOut('slow');
+                }, 1500);
+                $('.money').val('');
+            });
+
+            //校验金额
+            function check(money, object) {
+                var moneyTest = /^\d+$/;
+                if (money.indexOf('.') >= 0) {
+                    alert('请购买整数金额');
+                    object.val(null);
+                    return false;
+                }
+                if (moneyTest.test(money)) {
+                    //输入格式正确
+                    //判断金额是否低于两元
+                    if (money < 2) {
+                        object.val(null);
+                        alert('下注金额最低两元');
+                        return false;
+                    } else if (money > 2000) {
+                        alert('最高下注2000金额');
+                        object.val(null);
+                        return false;
+                    }
+                    //格式正确且金额合法
+                    return true;
+                }
+                //不符合格式
+                else {
+                    object.val(null);
+                    alert('输入金额有误');
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

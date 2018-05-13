@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiantian.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.tiantian.pojo.User">
+        <id column="uId" jdbcType="BIGINT" property="uId"/>
+        <result column="uName" jdbcType="VARCHAR" property="uName"/>
+        <result column="uRealName" jdbcType="VARCHAR" property="uRealName"/>
+        <result column="uPassword" jdbcType="VARCHAR" property="uPassword"/>
+        <result column="uPhone" jdbcType="VARCHAR" property="uPhone"/>
+        <result column="uWechat" jdbcType="VARCHAR" property="uWechat"/>
+        <result column="uAlipay" jdbcType="VARCHAR" property="uAlipay"/>
+        <result column="uLeaderId" jdbcType="BIGINT" property="uLeaderId"/>
+        <result column="uTime" jdbcType="TIMESTAMP" property="uTime"/>
+        <result column="balance" jdbcType="DECIMAL" property="balance"/>
+        <association property="uLeader" javaType="com.tiantian.pojo.User">
+            <id property="uName" column="uLeaderName"/>
+        </association>
+        <association property="manager" javaType="com.tiantian.pojo.Manager">
+            <id property="mId" column="mId"/>
+            <result column="uId" jdbcType="BIGINT" property="uId"/>
+            <result column="recharge" jdbcType="TINYINT" property="recharge"/>
+            <result column="modifiedPwd" jdbcType="TINYINT" property="modifiedPwd"/>
+            <result column="subordinate" jdbcType="TINYINT" property="subordinate"/>
+            <result column="bill" jdbcType="TINYINT" property="bill"/>
+            <result column="transactionLog" jdbcType="TINYINT" property="transactionLog"/>
+            <result column="addTime" jdbcType="TIMESTAMP" property="addTime"/>
+        </association>
+    </resultMap>
+
+    <!--所有字段-->
+    <sql id="Base_Column_List">
+    uId, uName, uRealName, uPassword, uPhone, uWechat, uAlipay, uLeaderId, uTime, balance
+    </sql>
+
+    <!--根据用户id查找指定用户-->
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where uId = #{uId,jdbcType=BIGINT}
+    </select>
+
+    <!--根据用户账号查找指定用户-->
+    <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where uName = #{name}
+    </select>
+
+    <!--查找全部用户-->
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+    </select>
+
+    <!--根据用户账号查询下线用户uId,uName,balance,uTime,uLeaderName邀请人账号，该方法只能查询到属于当前管理员下线的用户-->
+    <select id="selectUserSomeInfo" resultMap="BaseResultMap">
+      select
+	    uId,uName,balance,uTime,(
+		  select u.uName
+		  from user u
+		  where u.uId=#{currentUser.uId}) as uLeaderName
+	  from user u
+	  where uName=#{findUser.uName} and uLeaderId=#{currentUser.uId}
+    </select>
+
+    <!--查询当前管理员的所有下线用户uId,uName,balance,uTime,uLeaderName邀请人账号字段 返回用户列表，该方法只能查询到属于当前管理员下线的用户-->
+    <select id="selectUserSomeInfoList" resultMap="BaseResultMap">
+        select
+        a.uId,a.uName,a.balance,a.uTime,b.uName as uLeaderName
+        from (
+        select
+        uId,uName,balance,uTime,uLeaderId
+        from user) a
+        left join user b on a.uLeaderId=b.uId
+        where a.uLeaderId=#{currentUser.uId}
+    </select>
+    <!--根据账号查询所有注册用户，返回uId,uName,balance,uTime,uLeaderName邀请人账号字段-->
+    <select id="selectAllUserSomeInfo" resultMap="BaseResultMap">
+        select
+        uId,uName,balance,uTime,(
+        select
+        u.uName
+        from user u
+        where u.uId = (
+        select u2.uLeaderId from user u2 where u2.uName = #{findUser.uName})) as uLeaderName
+        from user
+        where uName = #{findUser.uName}
+    </select>
+    <!--<select id="selectUserSomeInfoList" resultMap="BaseResultMap">
+         select
+         a.uId,a.uName,a.balance,a.uTime,b.uName as uLeaderName
+         from (
+         select
+         uId,uName,balance,uTime,uLeaderId
+         from user) a
+         left join user b on a.uLeaderId=b.uId
+     </select>-->
+
+
+
+
+    <!--根据用户账号和密码查询用户-->
+    <select id="selectUserByAccountAndPwd" parameterType="com.tiantian.pojo.User" resultMap="BaseResultMap">
+      select
+        user.uId,user.uName,user.uRealName,user.uPassword,user.uPhone,user.uWechat,user.uAlipay,user.uLeaderId,user.uTime,user.balance,manager.mId,manager.recharge,manager.modifiedPwd,manager.subordinate,manager.bill,manager.transactionLog,manager.addTime
+      from user
+      left join manager
+      on user.uId=manager.uId
+      where user.uName=#{user.uName} and user.uPassword=#{user.uPassword}
+    </select>
+
+    <!--根据id删除指定用户-->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from user
+    where uId = #{uId,jdbcType=BIGINT}
+    </delete>
+
+    <!--插入一个新的用户，更新全部字段-->
+    <insert id="insert" parameterType="com.tiantian.pojo.User">
+    insert into user (uId, uName, uRealName, 
+      uPassword, uPhone, uWechat, 
+      uAlipay, uLeaderId, uTime, 
+      balance)
+    values (#{uId,jdbcType=BIGINT}, #{uName,jdbcType=VARCHAR}, #{uRealName,jdbcType=VARCHAR}, 
+      #{uPassword,jdbcType=VARCHAR}, #{uPhone,jdbcType=VARCHAR}, #{uWechat,jdbcType=VARCHAR}, 
+      #{uAlipay,jdbcType=VARCHAR}, #{uLeaderId,jdbcType=BIGINT}, #{uTime,jdbcType=TIMESTAMP}, 
+      #{balance,jdbcType=DECIMAL})
+    </insert>
+
+    <!--插入一个新的用户，可选择性更新字段-->
+    <insert id="insertSelective" parameterType="com.tiantian.pojo.User">
+        insert into user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uId != null">
+                uId,
+            </if>
+            <if test="uName != null">
+                uName,
+            </if>
+            <if test="uRealName != null">
+                uRealName,
+            </if>
+            <if test="uPassword != null">
+                uPassword,
+            </if>
+            <if test="uPhone != null">
+                uPhone,
+            </if>
+            <if test="uWechat != null">
+                uWechat,
+            </if>
+            <if test="uAlipay != null">
+                uAlipay,
+            </if>
+            <if test="uLeaderId != null">
+                uLeaderId,
+            </if>
+            <if test="uTime != null">
+                uTime,
+            </if>
+            <if test="balance != null">
+                balance,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uId != null">
+                #{uId,jdbcType=BIGINT},
+            </if>
+            <if test="uName != null">
+                #{uName,jdbcType=VARCHAR},
+            </if>
+            <if test="uRealName != null">
+                #{uRealName,jdbcType=VARCHAR},
+            </if>
+            <if test="uPassword != null">
+                #{uPassword,jdbcType=VARCHAR},
+            </if>
+            <if test="uPhone != null">
+                #{uPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="uWechat != null">
+                #{uWechat,jdbcType=VARCHAR},
+            </if>
+            <if test="uAlipay != null">
+                #{uAlipay,jdbcType=VARCHAR},
+            </if>
+            <if test="uLeaderId != null">
+                #{uLeaderId,jdbcType=BIGINT},
+            </if>
+            <if test="uTime != null">
+                #{uTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="balance != null">
+                #{balance,jdbcType=DECIMAL},
+            </if>
+        </trim>
+    </insert>
+
+    <!--根据id更新用户字段，选择性更新，为空字段不更新-->
+    <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.User">
+        update user
+        <set>
+            <if test="uName != null">
+                uName = #{uName,jdbcType=VARCHAR},
+            </if>
+            <if test="uRealName != null">
+                uRealName = #{uRealName,jdbcType=VARCHAR},
+            </if>
+            <if test="uPassword != null">
+                uPassword = #{uPassword,jdbcType=VARCHAR},
+            </if>
+            <if test="uPhone != null">
+                uPhone = #{uPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="uWechat != null">
+                uWechat = #{uWechat,jdbcType=VARCHAR},
+            </if>
+            <if test="uAlipay != null">
+                uAlipay = #{uAlipay,jdbcType=VARCHAR},
+            </if>
+            <if test="uLeaderId != null">
+                uLeaderId = #{uLeaderId,jdbcType=BIGINT},
+            </if>
+            <if test="uTime != null">
+                uTime = #{uTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="balance != null">
+                balance = #{balance,jdbcType=DECIMAL},
+            </if>
+        </set>
+        where uId = #{uId,jdbcType=BIGINT}
+    </update>
+
+    <!--根据id更新用户字段，全部更新，空属性将会被插入-->
+    <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.User">
+    update user
+    set uName = #{uName,jdbcType=VARCHAR},
+      uRealName = #{uRealName,jdbcType=VARCHAR},
+      uPassword = #{uPassword,jdbcType=VARCHAR},
+      uPhone = #{uPhone,jdbcType=VARCHAR},
+      uWechat = #{uWechat,jdbcType=VARCHAR},
+      uAlipay = #{uAlipay,jdbcType=VARCHAR},
+      uLeaderId = #{uLeaderId,jdbcType=BIGINT},
+      uTime = #{uTime,jdbcType=TIMESTAMP},
+      balance = #{balance,jdbcType=DECIMAL}
+    where uId = #{uId,jdbcType=BIGINT}
+  </update>
+</mapper>

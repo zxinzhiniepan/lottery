@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiantian.mapper.MessageMapper">
+  <resultMap id="BaseResultMap" type="com.tiantian.pojo.Message">
+    <id column="mId" jdbcType="BIGINT" property="mId" />
+    <result column="mName" jdbcType="VARCHAR" property="mName" />
+    <result column="mMoney" jdbcType="DECIMAL" property="mMoney" />
+    <result column="anid" jdbcType="BIGINT" property="anid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    mId, mName, mMoney, anid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from message
+    where mId = #{mId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from message
+    where mId = #{mId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tiantian.pojo.Message">
+    insert into message (mId, mName, mMoney, 
+      anid)
+    values (#{mId,jdbcType=BIGINT}, #{mName,jdbcType=VARCHAR}, #{mMoney,jdbcType=DECIMAL}, 
+      #{anid,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiantian.pojo.Message">
+    insert into message
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mId != null">
+        mId,
+      </if>
+      <if test="mName != null">
+        mName,
+      </if>
+      <if test="mMoney != null">
+        mMoney,
+      </if>
+      <if test="anid != null">
+        anid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mId != null">
+        #{mId,jdbcType=BIGINT},
+      </if>
+      <if test="mName != null">
+        #{mName,jdbcType=VARCHAR},
+      </if>
+      <if test="mMoney != null">
+        #{mMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="anid != null">
+        #{anid,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiantian.pojo.Message">
+    update message
+    <set>
+      <if test="mName != null">
+        mName = #{mName,jdbcType=VARCHAR},
+      </if>
+      <if test="mMoney != null">
+        mMoney = #{mMoney,jdbcType=DECIMAL},
+      </if>
+      <if test="anid != null">
+        anid = #{anid,jdbcType=BIGINT},
+      </if>
+    </set>
+    where mId = #{mId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiantian.pojo.Message">
+    update message
+    set mName = #{mName,jdbcType=VARCHAR},
+      mMoney = #{mMoney,jdbcType=DECIMAL},
+      anid = #{anid,jdbcType=BIGINT}
+    where mId = #{mId,jdbcType=BIGINT}
+  </update>
+</mapper>

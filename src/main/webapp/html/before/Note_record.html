@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>投注记录</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/importbill.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <style>
+        header{
+            position: relative;
+            height: 50px;
+            background: #ca454c;
+        }
+        .headtop{
+            margin: 0;
+            padding: 0;
+        }
+        .headtop>a{
+            position: absolute;
+            display: inline-block;
+        }
+        .headtop>a:first-child{
+            top: 10px;
+            left:15px;
+            width:28px;
+            height: 28px;
+            font-size:30px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .headtop>a:last-child{
+            top:10px;
+            right:35px;
+            display: inline-block;
+            background-size:cover;;
+            font-size:16px;
+            color:#FFF5EE;
+            padding: 5px;
+        }
+        .headtop>h4{
+            text-align: center;
+            padding: 14px 0;
+            font-size: 21px;
+            color: #fff;
+        }
+        .note_top>ul{
+            overflow: hidden;
+            padding-top: 10px;
+        }
+        .note_top>ul>li{
+            float: left;
+            width: 25%;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+        .note_top>ul>li:last-child{
+            border-right: 0;
+        }
+        .list{
+            margin-top: 30px;
+        }
+        /**/
+        .tab{
+            /*border:1px solid #c9c9c9;*/
+            padding:10px 0px;
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+            overflow: hidden;
+        }
+        .img-wrap{
+            width: 50px;
+            height: 50px;
+            border: 1px dashed black;
+        }
+        .content{
+            height: 50px;
+            /*border:1px dashed black;*/
+            padding: 0px;
+            padding-top: 3px;
+        }
+        .title,.money{
+            font-size: 16px;
+            font-weight: 600;
+            /*border:1px dashed black;*/
+            color: black;
+        }
+        .date{
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+
+
+    </style>
+</head>
+<header>
+    <div class="headtop">
+        <a href="MySubject.html" class="glyphicon glyphicon-menu-left"></a>
+        <h4>投注记录</h4>
+    </div>
+</header>
+<body style="background: #f3f3f3">
+<section>
+    <div class="container list">
+        <div class="row tab">
+            <div class="col-xs-2">
+                <div class="img-wrap"></div>
+            </div>
+            <div class="col-xs-10 content">
+                <div class="col-xs-9 title">六合彩：特码</div>
+                <div class="col-xs-3 money">-100</div>
+                <div class="col-xs-12 date">04-24 18:40</div>
+            </div>
+        </div>
+        <div class="row tab">
+            <div class="col-xs-2">
+                <div class="img-wrap"></div>
+            </div>
+            <div class="col-xs-10 content">
+                <div class="col-xs-9 title">六合彩：生肖</div>
+                <div class="col-xs-3 money">-70</div>
+                <div class="col-xs-12 date">04-24 19:20</div>
+            </div>
+        </div>
+        <div class="row tab">
+            <div class="col-xs-2">
+                <div class="img-wrap"></div>
+            </div>
+            <div class="col-xs-10 content">
+                <div class="col-xs-9 title">六合彩：色波</div>
+                <div class="col-xs-3 money">-110</div>
+                <div class="col-xs-12 date">04-24 20:41</div>
+            </div>
+        </div>
+        <div class="row tab">
+            <div class="col-xs-2">
+                <div class="img-wrap"></div>
+            </div>
+            <div class="col-xs-10 content">
+                <div class="col-xs-9 title">分分彩</div>
+                <div class="col-xs-3 money">-110</div>
+                <div class="col-xs-12 date">04-24 20:41</div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="../../js/jquery-2.0.3.min.js"></script>
+<script src="../../js/jquery.combo.select.js"></script>
+<script>
+    /*点击列表实现页面跳转*/
+    $('.tab').on('click',function () {
+       location.href = "bill.html";
+    });
+
+</script>
+
+</html>
